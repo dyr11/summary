@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>localStorage</title>
+	<link rel="stylesheet" href=""></head>
+	<script type="text/javascript">
+	window.onload=function () {
+		var localStorage=document.getElementById("localStorage");
+		if(window.localStorage){
+			var storage=window.localStorage;
+			var data_list=document.getElementById("data_list");
+			for(item in storage){
+				var key=item;
+				var value=storage[key];
+				var li=document.createElement("li");
+				li.innerHTML=key+":"+value;
+				data_list.appendChild(li);
+			}
+			storage.setItem((new Date()).getTime(),new Date().	getTime());
+			storage,removeItem("key");
+			console.log(JSON.parse(JSON.stringify([[1,2,3]])));
+			//sessionStorage会话存储。localStorage持久存储
+		}else{
+			localStorage.innerHTML=" not support local storage!";
+		}
+	}
+</script>
+<body>
+	<div id+"localStorage">
+		<ul id="data_list"></ul>
+	</div>
+</body>
+</html>

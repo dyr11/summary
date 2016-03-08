@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>video_canvas</title>
+	<script type="text/javascript">
+		var img=new Image();
+		img.src="pic.jpg";
+		img.onload=function(){
+			var origin=document.getElementById("origin");
+			var later=document.getElementById('later');
+			origin_context=origin.getContext("2d");
+			origin_context.drawImage(this,0,0,origin.width,origin.height);
+			var frame=origin_context.getImageData(0,0,origin.width,origin.height);
+			var image_data=frame.data;
+			var length=image_data.length/4;
+			for (var i = 0; i < length; i++) {
+				var r=image_data[i*4+0];
+				var g=image_data[i*4+1];
+				var b=image_data[i*4+2];
+				var f=Math.round((r+g+b)/3);
+				image_data[i*4+0]=f;
+				image_data[i*4+1]=f;
+				image_data[i*4+2]=f;
+			};
+			later_context=later.getContext("2d");
+			later_context.putImageData(frame,0,0);
+		};
+	</script>
+	<style type="text/css">
+	canvas{
+		border: 1px solid red;
+	}
+	</style>
+</head>
+<body>
+	<canvas id="origin" width="400px" height="400px">
+		
+	</canvas>
+	<canvas id="later" width="400px" height="400px">
+		
+	</canvas>
+</body>
+</html>
