@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>drag</title>
+
+	<style type="text/css">
+	#drop_list,#drag_list{
+		min-height: 100px;
+	}
+	ul{
+		border:1px solid red;
+		list-style: none;
+	}
+	</style>
+</head>
+<script type="text/javascript">
+	window.onload=function(){
+		var drag_list=document.querySelectorAll("#drag_list li,#drop_list li");
+		[].forEach.call(drag_list,function(item) {
+			item.addEventListener("dragstart",function(event){
+				console.log(event.target.id+":drag start");
+				event.dataTransfer.setData("id",event.target.id);
+				return true;
+			});
+			item.addEventListener("dragend",function(event){
+				console.log(event.target.innerHTML+"drag end");
+			});
+		});
+
+		var drop_list=document.querySelectorAll("#drag_list,#drop_list");	
+		[].forEach.call(drop_list,function(item) {
+			item.addEventListener("dragenter",function(event){
+				
+			});
+
+			item.addEventListener("dragover",function(event){
+				event.preventDefault();
+			});
+
+			item.addEventListener("drop",function(event){
+				var id=event.dataTransfer.getData("id");
+				var li=document.getElementById(id);
+				this.appendChild(li.parentNode.removeChild(li));
+				console.log("drop_list drop");
+			});
+
+			item.addEventListener("dragleave",function(event){
+				event.stopPropagation();
+				event.preventDefault();
+			});
+		});
+		
+	}
+</script>
+<body>
+	<fieldset>
+		<legend>drag list</legend>
+		<ul id="drag_list">
+			<li id="drag1" draggable="true">drag1</li>
+			<li id="drag2" draggable="true">drag2</li>
+			<li id="drag3" draggable="true">drag3</li>
+			<li id="drag4" draggable="true">drag4</li>
+			<li id="drag5" draggable="true">drag5</li>
+		</ul>
+	</fieldset>
+	<fieldset>
+		<legend>drop list</legend>
+		<ul id="drop_list">
+		</ul>
+	</fieldset>
+</body>
+</html>
