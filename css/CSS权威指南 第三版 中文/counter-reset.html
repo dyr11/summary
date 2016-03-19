@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>counter-reset</title>
+	<style type="text/css">
+	body{
+		counter-reset: h1_count h2_count h3_count h4_count;
+	}
+	h1:before{
+		counter-increment:h1_count;
+		content:counter(h1_count) ;
+	}
+	h1{
+		/*border:1px solid red;*/
+		counter-reset: h2_count h3_count h4_count;
+	}
+	h2:before{
+		counter-increment: h2_count;
+		content:"__" counter(h1_count) "_" counter(h2_count);
+	}
+	h2{
+		counter-reset: h3_count h4_count;
+		/*border: 1px solid green;*/
+	}
+	h3:before{
+		counter-increment: h3_count;
+		content: "____"counter(h1_count) "_" counter(h2_count) "_" counter(h3_count); 
+	}
+	h3{
+		counter-reset: h4_count;
+		/*border:1px solid black;*/
+	}
+	h4:before{
+		counter-increment: h4_count;
+		content: "______" counter(h1_count) "_" counter(h2_count) "_" counter(h3_count) "_" counter(h4_count); 
+	}
+	h4{
+	}
+	</style>
+</head>
+<body>
+	<!-- (h1#h1_$+(h2#h2_$+(h3#h3_$+h4#h4_$*3)*3)*3)*3 -->
+	<h1 class="h1_1"></h1>
+	<h2 class="h2_1"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h2 class="h2_2"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h2 class="h2_3"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h1 class="h1_2"></h1>
+	<h2 class="h2_1"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h2 class="h2_2"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h2 class="h2_3"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h1 class="h1_3"></h1>
+	<h2 class="h2_1"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h2 class="h2_2"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h2 class="h2_3"></h2>
+	<h3 class="h3_1"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_2"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+	<h3 class="h3_3"></h3>
+	<h4 class="h4_1"></h4>
+	<h4 class="h4_2"></h4>
+	<h4 class="h4_3"></h4>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>RegExp</title>
+	<script type="text/javascript">
+		var regexp1=/[abcs]/g;
+		var regexp2=/[^abc]/;
+		var regexp3=/[a-zA-Z0-9]/;
+		var regexp4=/a+?/;//非贪婪匹配如aaa 只会匹配a
+		var regexp5=/java(?!Script)[A-Z]\w*/;
+		console.log("aasdscx".match(regexp1));
+		console.log("javaScript".match(regexp5));
+		console.log("javaScrip".match(regexp5));
+		console.log("javaScripter".match(regexp5));
+		console.log("----------search-----------------------------")
+		console.log("asadsd".search(/sa/));
+		console.log("\"aaaa\"".replace(/"([^"]*)"/,"|$1|"));
+		console.log("adadad".match(/[ad]{2}/));
+		console.log('--------------------url match----------');
+		var text="sdsasd http://www.dyr11.com:80/Ajax/index.html sds" ;
+		var url=/(\w+):\/\/([\w.]+)(:\d+)?\/(\S*)/;
+		var result=text.match(url);
+		console.log(result);
+		for (var i = 0; i < result.length; i++) {
+			console.log(result[i]);
+		}
+
+		console.log("-------------split--------------");
+		console.log("1,2,3,4,      5,   6, 7".split(","));
+		console.log("1,2,3,4,      5,   6, 7".split(/\s*,\s*/));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

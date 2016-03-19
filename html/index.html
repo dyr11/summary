@@ -1,0 +1,69 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>googel map</title>
+	<link rel="stylesheet" href="">
+	<script src="http://maps.google.com/maps/api/js?Sensortrue" type="text/javascript" charset="utf-8" async defer></script>
+	<script type="text/javascript">
+		window.onload=displayMap;
+		function  d(argument) {
+			if(navigator.geoloaction){
+				navigator.getCurrentPosition(displayMap,err);
+			}else{
+				alert("not support!");
+			}
+		}
+		function displayMap(location){
+			//var latitude=location.coords.latitude;
+			//var langitude=location.coords.longitude;
+			var latitude=31;
+			var langitude=118;
+			var latlng=new google.maps.LatLng(latitude,langitude);
+			var mapOption={
+				zoom:10,
+				center:latlng,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var divLocation=document.getElementById("location");
+			var map=new google.maps.Map(divLocation,mapOption);
+			var title="hello";
+			var content="hello weoda";
+			var marks={
+				position:latlng,
+				map:map,
+				title:title,
+				clickable:true
+			};
+
+			var mark=new google.maps.Marker(marks);
+			var infoOption={
+				content:content,
+				position:latlng
+			};
+			var info=new google.maps.InfoWindow(infoOption);
+			google.maps.event.addListener(mark,"click",function  () {
+				info.open(map);
+			});
+
+		}
+	</script>
+	<style type="text/css" media="screen">
+	*{
+		margin:0;
+		padding: 0;
+	}	
+		#location{
+			width: :400px;
+			height: 400px;
+			margin: 0 auto;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="location"> </div>
+</body>
+</html>

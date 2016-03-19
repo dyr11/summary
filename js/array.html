@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript">
+		var s=["a=a1","b=b1","c=c1"];
+		var result=s.map(function(data) {
+			console.log(data);
+			return String.prototype.split.call(data,"=");
+		});
+		console.log(result);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

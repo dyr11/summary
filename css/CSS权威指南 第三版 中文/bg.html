@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>background-image</title>
+	<style type="text/css">
+	body{
+		background-image: url(bg.png);
+		background-position: center;
+		/*background-repeat: no-repeat;*/
+		background-size: 300px 300px;
+		background-attachment: fixed;
+	}
+	div{
+		width: 300px;
+		height: 300px;
+		background-image: url(bg.jpg);
+		background-repeat: no-repeat;
+		margin: 20px;
+		float: left;
+		border: 1px dotted red;
+	}
+	#gb1{
+		background-position: center center;
+	}
+
+	#bg2{
+		background-position: -400px -300px;
+	}
+	#bg3{
+		background-position: 100px 100px;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="bg1"></div>
+	<div id="bg2"></div>
+	<div id="bg3"></div>
+	<div id="1"></div>
+	<div id="2"></div>
+	<div id="3"></div>
+	<div id="4"></div>
+	<div id="5"></div>
+</body>
+</html>

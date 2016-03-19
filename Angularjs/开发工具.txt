@@ -1,0 +1,8 @@
+±à¼­Æ÷£ºsublime webstorm
+ä¯ÀÀÆ÷²å¼ş£ºbatarang
+git :msysgit  tortoisegit
+http://nodejs.org
+www.gruntjs.org
+bower
+http-server
+µ¥Ôª²âÊÔ£ºkarma jasmine protractor

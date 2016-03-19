@@ -1,0 +1,100 @@
+
+
+
+
+#include<iostream>
+
+using namespace std;
+
+struct node{
+	node* left=NULL;
+	node* parent=NULL;
+	node* right=NULL;
+	int value;
+	node(int v){
+		value = v;
+	}
+	void setrightChild(node *child){
+		right = child;
+		child->parent = this;
+	}
+	void setleftChild(node * child){
+		left = child;
+		child->parent = this;
+	}
+	void setparent(node * p){
+		parent = p;
+	}
+
+	node * next(){
+		if (right != NULL){
+			return right;
+		}
+		else{
+			return parent;
+		}
+	}
+};
+
+node node1(8);
+node node2(12);
+node node3(7);
+node node4(15);
+node node5(9);
+node node6(3);
+node node7(1);
+node node8(4);
+struct tree{
+	node *root;
+
+	void init(){
+		root = new node(10);
+		root->setleftChild(&node1);
+		root->setrightChild(&node2);
+		node1.setleftChild(&node3);
+		node2.setrightChild(&node4);
+		node1.setrightChild(&node5);
+		node3.setleftChild(&node6);
+		node6.setleftChild(&node7);
+		node6.setrightChild(&node8);
+	}
+
+	void inorder(){
+
+		node *pre = findMin(root);
+		cout << pre->value << " ";
+		node * current = pre->next();
+
+		while (current != NULL){
+			if (pre->right == current){
+				pre = findMin(current);
+				current = pre->next();
+				cout << pre->value << " ";
+			}
+			else if (current->right == pre){
+				pre = current;
+				current = pre->parent;
+			}
+			else if (current->left == pre){
+				cout << current->value << " ";
+				pre = current;
+				current = pre->next();
+			}
+		}
+	}
+
+	node * findMin(node *n){
+		if (n->left != NULL)
+			return findMin(n->left);
+		return n;
+	}
+
+	
+};
+
+
+int main(){
+	tree t;
+	t.init();
+	t.inorder();
+}

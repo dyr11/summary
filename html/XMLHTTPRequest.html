@@ -1,0 +1,30 @@
+Access-Control-Allow-Origin: <origin> | *
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+	window.onload=function d () {
+
+		var url = "http://www.dyr11.com/sales.json";
+		var xmlHTTP=new XMLHttpRequest();
+		xmlHTTP.open("GET",url);
+		xmlHTTP.withCredentials = true;
+		xmlHTTP.onload=function  (argument) {
+			if(xmlHTTP.status==200){
+			}
+			alert(xmlHTTP.responseText);
+		};
+		xmlHTTP.send(null);
+
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

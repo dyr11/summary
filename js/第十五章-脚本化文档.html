@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>脚本化文档</title>
+	<style type="text/css">
+	div{
+		border: 1px solid red;
+		height: 300px;
+		width:300px;
+	}
+	span{
+		border :1px solid blue;
+	}
+	</style>
+</head>
+<body>
+	<p id="pp"><i> hhh</i>hello world </p>
+	<div id="div1">
+		<span id="span1">move</span>
+	</div>
+	<div id="div2">
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var v1=document.body.childNodes;//包括text元素（空元素）
+	var v2=document.body.children;//不包括空元素
+	var v3=document.body.attributes;
+	console.log(v1);
+	console.log(v2);
+	console.log(v3);
+
+	var node_p=document.querySelector("#pp");
+	console.log(node_p.nodeValue);
+	console.log(node_p.innerHTML);
+	console.log(node_p.innerText);
+	console.log(node_p.childNodes[1].nodeValue);
+
+	console.log("---------appendChild-----move--------");
+	var child=document.querySelector("#span1");
+	var parent=document.querySelector("#div2");
+	parent.appendChild(child);
+
+	console.log("------窗口属性--------------------");
+	console.log(document.body.scrollTop||document.documentElement.scrollTop);
+	console.log(parent.getBoundingClientRect());
+	console.log(document.elementFromPoint(100,100));
+	document.designMode="on";
+	parent.setAttribute("contenteditable","true");
+	setInterval(function(){
+
+	})
+	function move(e,distance,time,fun){
+		if(typeof(e)==="string")
+			e=document.getElementById(e);
+		if(!time)
+			time=100;
+		if(!distance)
+			distance=300;
+		var startTime=(new Date()).getTime();
+		var originStyle=e.style.cssText;
+		var percent=0;
+		e.style.position="relative";
+		animate();
+		function animate(){
+			if (percent>1) {
+				e.style.cssText=originStyle;
+				fun&&fun(e);
+			}else{
+				var nowTime=(new Date()).getTime();
+				percent=(nowTime-startTime)/time;
+				// console.log(percent);
+				var pos=distance*Math.sin(percent*Math.PI*4);
+				e.style.left=pos+"px";
+				setTimeout(animate,100);
+			}
+		}
+	}
+
+	move(parent, 100, 5000, function(){console.log("end");});
+	　var name = "The Window";
+　　var object = {
+　　　　name : "My Object",
+　　　　getNameFunc : function(){
+　　　　　　var that = this;
+			console.log(that);
+			console.log(this);
+　　　　　　return function(){
+　　　　　　　　return that.name;
+　　　　　　};
+　　　　}
+　　};
+　　alert(object.getNameFunc()());
+</script>
+</html>
