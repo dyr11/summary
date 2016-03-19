@@ -1,4 +1,4 @@
-±à¼­Æ÷£ºsublime webstorm
+±à¼­Æ÷£ºsublime webstorm    ¼¤»îhttp://idea.qinxi1992.cn/
 ä¯ÀÀÆ÷²å¼þ£ºbatarang
 git :msysgit  tortoisegit
 http://nodejs.org
