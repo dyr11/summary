@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>query_select</title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		window.onload=function () {
+			 var result=document.getElementById("result");
+			 var div11_id=document.querySelector("#div1>.div_class");
+			 //querySelectorAll();
+			 result.innerHTML=div11_id.innerHTML;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="div1">
+		<div id="div11">
+			<p>div11_id</p>
+		</div>
+		<div class="div_class">
+			<p>div_class</p>
+		</div>
+	</div>
+	<div id="result">
+		
+	</div>
+</body>
+</html>

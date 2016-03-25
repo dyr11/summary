@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="directorApp">
+<head>
+    <meta charset="UTF-8">
+    <title>director-demo</title>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../js/directorApp.js"></script>
+    <style type="text/css">
+        .title{
+            background-color: #fff;
+            font-size:20px;
+            border:1px solid red;
+        }
+        .body{
+            background-color: green;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body ng-controller="controller">
+<outer class="outer"  >
+    <inner class="inner" ng-repeat="book in books" title="book.title">
+            {{book.text}}
+        </inner>
+</outer>
+</body>
+</html>

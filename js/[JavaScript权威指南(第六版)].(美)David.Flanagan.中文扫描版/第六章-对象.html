@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>js learning</title>
+	<script type="text/javascript">
+		// null===undefined
+		// false
+		// null==undefined
+		// true
+		console.log("------------------property--------------------");
+		var s={
+			d:3,
+			get dd(){
+				return this.d;
+			},
+			set dd(n){
+				return this.d=n;
+			},
+		}
+		console.log("d:"+s.d);
+		console.log("dd:"+s.dd);
+		console.log("dd(n)"+(s.dd=4));
+		console.log("d:"+s.d);
+		console.log(s.hasOwnProperty("dd"));
+		console.log(Object.getOwnPropertyDescriptor(s,"dd"));
+		Object.defineProperty(s,"def",{value:1,writable:true,enumerable:false,configurable:true});
+		console.log(Object.getOwnPropertyDescriptor(s,"def"));
+		console.log(Object.getOwnPropertyNames(s));
+		var list=[];
+		for(var ds in s){
+					list.push(ds);
+		}
+		console.log("list:"+list);
+		//
+		console.log("-----------value is a function------------");
+		var s1={value:new function(){
+			this.a=3;
+		},value1:function(b){
+			this.b=b;
+		}};
+		console.log("S:"+s1.value.a);
+		s1.value1(4);
+		console.log("s.value1:"+s1.b);
+
+		console.log("-------------------prototype------------");
+		console.log(Object.getPrototypeOf(s1));
+		console.log(Object.getPrototypeOf(s));
+		var date=new Date();
+		console.log(Object.getPrototypeOf(date));
+		console.log(date.constructor.prototype);
+		console.log(Object.prototype.isPrototypeOf(date));
+
+
+		console.log("-------------------extension--------------------");
+		console.log(Object.isExtensible(s1));
+		Object.preventExtensions(s1);
+		console.log(Object.isExtensible(s1));
+		console.log(Object.isSealed(s1));
+		console.log(Object.isFrozen(s1));
+
+		console.log("-------------------json--only enumerable value--------------------");
+		console.log(JSON.stringify(s));
+
+		console.log("----------------------toString()-----------------");
+		console.log({d:2,s:3}.toString());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

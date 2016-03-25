@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>class and template</title>
+	<script type="text/javascript">
+		function f1(x){
+			this.x=x
+		}
+		f1.prototype.add=function(x,y){
+			return x+y+this.x;
+		}
+		var v1=new f1(2);
+		var v2=new f1(4);
+		console.log(v1.constructor===f1);
+		console.log(f1.prototype.constructor===f1);
+		console.log(v1.add(2,3));
+		console.log(v2.add(2,3));
+		console.log(v1.constructor);
+
+
+		function test(o){
+			for (var i = 1; i < arguments.length; i++) {
+				var a=arguments[i];
+				switch (typeof(a)) {
+					case "string":
+						return typeof(o[a])==="function";
+						break;
+					case "function":
+						a=a.prototype;
+					case "object":
+						for(var f in a){
+							if(typeof(a[f])!=="function")
+								continue;
+							if(typeof(o[f])!=="function")
+								return false;
+						}
+					default:
+						// statements_def
+						break;
+				}
+				return true;
+			}
+		}
+
+		console.log(test(v1,f1));
+		console.log(test(v1,"add"));
+		console.log(test(v1,v1));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

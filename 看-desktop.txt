@@ -1,0 +1,22 @@
+系统思维
+信息技术
+策略和机制
+普适计算
+allocator
+编译原理
+v2012怎么debug
+算法理论
+了不起的盖茨比
+容斥原理
+a symbol table in a compiler 编译器的符号表
+神经网络
+隐马尔科夫
+启发式方法
+数论
+The C Programming Language
+S t e v e
+McConnell的《完整编程》(Code Complete，Microsoft Press，1 9 9 3 )
+Peter van der Linden的《熟练的C程序设计：深入C的奥密》(Expert C Programming: Deep C Secret，Prentice Hall，1 9 9 4 )
+<<失乐园》
+<the data warehouse toolkit> ralph kimball
+<building the data warehouse> bill inmon

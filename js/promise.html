@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>promise</title>
+	<script type="text/javascript">
+		var promise=new Promise(function(resolve,reject){
+			if((new Date()).getTime()%2===1){
+				resolve("hello");
+			}else{
+				reject("world");
+			}
+		});
+		promise.then(function suc(e){console.log(e.message);},function err(e){console.log(e.message);})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

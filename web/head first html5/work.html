@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>worker</title>
+	<script type="text/javascript">
+	window.onload=function () {
+		var result=document.getElementById('worker_result');
+		if(window.Worker){
+			var ul=document.createElement("ul");
+			result.appendChild(ul);
+			for (var i = 0; i < 10; i++) {
+				var worker=new Worker("worker.js");
+				worker.id=i;
+				worker.onmessage=function  (result) {
+					var li=document.createElement("li");
+					li.innerHTML=result.target.id+":"+result.data;
+					ul.appendChild(li);
+					this.terminate();
+				}
+				worker.postMessage("");
+			};
+
+		}else{
+			result.innerHTML="not support worker!";
+		}
+	}
+	</script>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#container{
+		border:1px solid red;
+		margin: 0;
+		padding: 0;
+	}
+	#worker_result{
+		font-size:30px;
+		border:1px solid blue;
+	}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="worker_result"> </div> 
+	</div>
+</body>
+</html>

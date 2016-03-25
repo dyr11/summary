@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>this test</title>
+	<link rel="stylesheet" href="">
+</head>
+<script type="text/javascript">
+
+function println(v){
+	print(v+"<br>")
+}
+function print(v){
+	document.write(v);
+}
+
+// println("test1---------------");
+// 	println(this);
+// 	var x=10;
+// 	var obj={
+// 		x:20,
+// 		f:function(){
+// 			println(this.x);
+// 			var foo=function(){
+// 				println(this.x);
+// 			}
+// 			foo();
+// 		}
+// 	}
+// 	obj.f();
+
+// println("test2------------------");
+// 	var x=10;
+// 	var obj={
+// 		x:20,
+// 		f:function(){
+// 			println(this.x);
+// 		}
+// 	}
+// 	obj.f();
+// 	obj.f.call(obj);
+// 	var fout=obj.f;
+// 	fout();
+// 	var obj2={
+// 		x:30,
+// 		f:obj.f
+// 	}
+// 	obj2.f();
+
+// function parent () {
+// 	this.name="dd";
+// 	this.fun=function  () {
+// 		console.log("hello world!");
+// 	}
+// }
+
+// function f(){
+
+// }
+// f.prototype=new parent();
+// f.prototype.constructor=f;
+// f.name;
+
+// function ClassA(sColor) {
+//     this.color = sColor;
+//     this.sayColor = function () {
+//         alert(this.color);
+//     };
+// }
+// function ClassB(sColor, sName) {
+//     this.newMethod = ClassA;
+//     this.newMethod(sColor);
+//     delete this.newMethod;
+//     this.name = sName;
+//     this.sayName = function () {
+//         alert(this.name);
+//     };
+// }
+// var objA = new ClassA("blue");
+// var objB = new ClassB("red", "John");
+// objA.sayColor();	//输出 "blue"
+// objB.sayColor();	//输出 "red"
+// objB.sayName();		//输出 "John"
+// function ClassA() {
+// }
+
+// ClassA.prototype.color = "blue";
+// ClassA.prototype.sayColor = function () {
+//     alert(this.color);
+// };
+
+// function ClassB() {
+// }
+
+// ClassB.prototype = new ClassA();
+// ClassB.prototype.name = "";
+// ClassB.prototype.sayName = function () {
+//     alert(this.name);
+// };
+// var objA = new ClassA();
+// var objB = new ClassB();
+// objA.color = "blue";
+// objB.color = "red";
+// objB.name = "John";
+// objA.sayColor();
+// objB.sayColor();
+// objB.sayName();
+
+// function A(x) {
+//     this.x = x;
+//     this.say = function(){
+//         return this.x;
+//     }
+// }
+// function B(x,y) {
+//     this.m = A; // 把构造函数A作为一个普通函数引用给临时方法m
+//     this.m(x);  // 执行构造函数A;
+//     delete this.m; // 清除临时方法this.m
+//     this.y = y;
+//     this.method = function(){
+//         return this.y;
+//     }
+// }
+// var a = new A(1);
+// var b = new B(2,3);
+// console.log(a.say()); //输出1, 执行构造函数A中的say方法
+// console.log(b.say()); //输出2, 能执行该方法说明被继承了A中的方法
+// console.log(b.method()); // 输出3， 构造函数也拥有自己的方法
+
+</script>
+<body>
+	
+</body>
+</html>

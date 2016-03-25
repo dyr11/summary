@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#div1{
+		width: 200px;
+		height: 200px;
+		border: 2px solid red;
+		position: absolute;
+	}
+	</style>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var p=$("<p>hello world</p>");
+		p.css({
+			color:"red"
+		});
+		p.click(function(){
+			alert("hello world!");
+		});
+		$("#div1").append(p);
+		$("#div1").css({
+			top:100,
+			left:100
+		}).fadeOut(1000).fadeIn(1000).fadeTo(1000,0.2).slideUp(1000).slideDown(1000).animate({width:"+=100"},1000);
+	});
+
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

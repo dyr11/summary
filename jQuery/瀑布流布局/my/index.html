@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>流式布局</title>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+	<script type="text/javascript">
+	var box_cols=[];
+	var lastImageId;
+	var notload=true;
+	var cols=0;
+	var count=0;
+	var load_count=0;
+	var box_width=0;
+		$(function  () {
+			var data=[{src:"Images/1.jpg"}
+			//,{src:"Images/2.jpg"},{src:"Images/3.jpg"},{src:"Images/4.jpg"},
+			//{src:"Images/5.jpg"},{src:"Images/6.jpg"},{src:"Images/7.jpg"},{src:"Images/8.jpg"},
+			//{src:"Images/9.jpg"},{src:"Images/10.jpg"},{src:"Images/11.jpg"},{src:"Images/12.jpg"}
+			];
+			addImageBox(data);
+			
+			// JSON.parse('{"success":true,"msg":"找到图片","data":[{"src":"Images/12jpg"},{"src":"Images/13jpg"},{"src":"Images/14jpg"},{"src":"Images/15jpg"},{"src":"Images/16jpg"}]}');
+		});
+
+		function addImageBox(data){
+			var main=$("#main");
+			for (var i = 0; i < data.length; i++) {
+					var box=$("<div>").addClass("box").attr("id",count+i+1);
+				//	console.log("count:"+(count+i));
+					var image_box=$("<div>").addClass("image_box");
+					var img=$("<img>").attr("src",""+data[i]["src"]);
+					// var box1="<div class=\"box\"><div class=\"image_box\"><img src=\"./images/"+i+".jpg\" ></div></div>";
+					 image_box.append(img);
+					 box.append(image_box);
+					// console.log(box);
+					main.append(box);
+					img.load(function () {
+						  load_count++;
+						  if(load_count==data.length){
+						  	load_count=0;
+						  	loadData();
+						  }
+					});
+					
+			};
+		}
+
+	$(window).load(function(){
+		//loadData();
+		//loadImage();
+	});
+
+	function loadData(){
+
+		var box=$(".box");
+		box_width=$(".box").eq(0).outerWidth();
+		console.log("sss:"+$(".box").eq(0).offset().left);
+		lastImageId=$(".box:last").attr("id");
+		//console.log("lastImageId:"+lastImageId);
+		var window_width=$(window).outerWidth();
+		cols=Math.floor(window_width/box_width);
+		$("#main").css({
+			width:cols*box_width,
+			margin: "0 auto"
+		});
+		// console.log("box_width:"+box_width);
+		// console.log("window_width:"+window_width);
+		// console.log("cols:"+cols);
+		
+		for (var i = count; i < cols; i++) {
+			box_cols[i]=0;
+		};
+		for (var i = count; i < box.length; i++) {
+		//	console.log("i:"+i);
+			console.log("imageId:"+box.eq(i).find("img").attr("src"));
+			var pos=findPosition(box.eq(i),box.eq(0));
+		//	console.log("pos:"+pos.left);
+			// if(i==0){
+			// 	console.log("left:" +pos.left);
+			// 	console.log("box_cols:"+box_cols);
+			// }
+			box.eq(i).css({
+				position:'absolute',
+				left:pos.left,
+				top:pos.top
+			});
+		};
+		count=box.length;
+		console.log("count:"+count);
+		loadImage();
+	}
+
+	$(window).scroll(function  () {
+		loadImage();
+	});
+
+	$(window).resize(function () {
+		var window_width=$(window).outerWidth();
+		var cols_new=Math.floor(window_width/box_width);
+		if(cols_new!=cols){
+			count=0;
+			loadData();
+		}else{
+			console.log("cols:"+cols_new);
+		}
+
+	});
+
+	function loadImage(){
+		var min=Math.min.apply(null,box_cols);
+		var scroll=$(window).scrollTop();
+	//	console.log("min:"+min);
+	//	console.log("scroll:"+scroll+$(window).height()+400);
+		if(min<scroll+$(window).height()+400&&notload){
+			notload=false;
+			$.ajax({
+				url:"http://www.dyr11.com/Ajax/loadImage.php?id="+lastImageId,
+				type:"GET",
+				dataType:"json",
+				success:function(data){
+				//	console.log($(data).serialize());
+					addImageBox(data.data);
+					// setTimeout(function () {
+					// 	 loadData();
+					 	 notload=true;
+					// },2000);
+					
+				},
+				error:function(xhr){
+					console.log('error:'+xhr.status);
+				}
+			})
+		}
+	}
+
+	function findPosition(box,start){
+		// var box_height=start.height();
+		 var box_width=start.outerWidth();
+		// console.log("box_width:"+box_width);
+		var index=0;
+		var min=box_cols[0];
+		for (var i = 0; i < box_cols.length; i++) {
+			if(min>box_cols[i]){
+				min=box_cols[i];
+				index=i;
+			}
+		//	console.log(box_cols[i]);
+		};
+		
+		var position=new Object();
+		position.left=start.offset().left+box_width*index;
+		position.top=box_cols[index];
+		box_cols[index]+=box.outerHeight();
+		//console.log("box.outerHeight():"+box.outerHeight());
+		//console.log("left:"+box_width);
+		return position;
+	}
+	</script>
+
+	<style type="text/css">
+		.mian{
+			margin: 0;
+			padding: 0;
+			position: relative;
+			overflow: scroll;
+			border: 3px solid balck;
+			
+		}
+		.box{
+			padding:20px;
+			float: left;
+			border: 3px solid green;
+
+		}
+
+		.box .image_box{
+			padding:10px;
+			border: 3px solid red;
+			border-radius:10px;
+			box-shadow: 10px  10px 10px 10px#ccc;
+		}
+	</style>
+</head>
+<body>
+	<div id="main" class="main">
+		
+	</div>
+</body>
+</html>

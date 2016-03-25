@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>搜索</title>
+	<style type="text/css" media="screen">
+	.container{
+		position: relative;
+	}
+	.search_tips{
+		float:right;
+		
+	}
+	.search_tips a{
+		color:#6c6c6c;
+		text-decoration: none;
+		height:45px;
+		line-height: 22.5px;
+	}
+	.search_btn{
+		float:right;
+	}
+	.submit{
+		width:100px;
+		height:45px;
+		background-color: red;
+		border: 0;
+		font-size:20px;
+		cursor: pointer;
+	}
+
+
+	.search_input{
+		height: 39px;
+		background-color: #f50;
+		overflow: hidden;
+		padding: 3px 0 3px 77px;
+
+	}
+	.search_input input{
+		height:39px;
+		line-height: 39px;
+		border: 0;
+		outline: 0;
+		width:100%;
+		background-color: white;
+	}
+	.search_input i{
+		position: absolute;
+		font-size: 18px;
+		color:red;
+		top:20px;
+		left:90px;
+	}
+	.search_list{
+		position: absolute;
+		width:77px;
+	}
+	.search_list ul{
+		list-style: none;
+		
+		margin: 0;
+		padding: 0;
+		height:39px;
+		padding: 3px 0 3px 3px;
+		overflow: hidden;
+		border-right: 1px solid #eee;
+	}
+
+	.search_list ul li{
+		height:39px;
+	
+		line-height: 39px;
+		text-align: center;
+		
+	}
+	.search_list ul li:hover{
+		background-color: #ddd;
+	}
+	.selected{
+		background-color: #fff;
+	}
+
+	</style>
+
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$("ul").mouseover(function () {
+			$(this).css({height:78});
+
+		});
+		$("ul").mouseout(function () {
+			$(this).css({height:39});
+		});
+		$("li").click(function (e) {
+			console.log("$(this).className:"+this.className);
+			 if(this.className&&this.className.indexOf("selected")>=0){
+
+			 }else{
+			 	var val=$("li.selected").html();
+			 	console.log("val:"+val);
+			 	console.log("this:"+$(this).html());
+			 	$("li.selected").html($(this).html());
+			 	$(this).html(val);
+			 	$("ul").css({height:45})
+			 }
+		})
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="search_list">
+			<ul >
+				<li id="li_1" class="selected">类型1</li>
+				<li id="li_2" >类型2</li>
+			</ul>
+		</div>
+		<div class="search_pane">
+			<form action="#" method="get" accept-charset="utf-8">
+
+				<div class="search_tips">
+					<a href="#">
+						高级
+						<br>搜索</a>
+				</div>
+				<div class="search_btn">
+					<input type="submit" class="submit" name="" value="搜索">
+				</div>
+				<div class="search_input">
+					<input type="text" name="" value="" placeholder=""  x-webkit-speech="">
+					<i>O</i>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

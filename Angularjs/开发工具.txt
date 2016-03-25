@@ -1,0 +1,10 @@
+±à¼­Æ÷£ºsublime webstorm    ¼¤»îhttp://idea.qinxi1992.cn/
+ä¯ÀÀÆ÷²å¼þ£ºbatarang
+git :msysgit  tortoisegit
+http://nodejs.org
+www.gruntjs.org
+bower
+http-server
+µ¥Ôª²âÊÔ£ºkarma jasmine protractor
+
+bower install argular-ui-router

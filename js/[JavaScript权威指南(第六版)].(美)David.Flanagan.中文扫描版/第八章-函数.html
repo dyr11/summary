@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript">
+		var s2=this;
+		var s={
+			s1:function(){
+				var s3=this;
+				console.log(s===s3);
+				f();
+				function f(){
+					console.log(this===s);
+					console.log(this===s2);
+				}
+			}
+		}
+
+
+		console.log("----------------argument---------------");
+		function argu(a){
+			console.log(arguments.length);
+		}
+		argu(1,2,3,4,5,6);
+
+
+		console.log("-----------------closures------------------------------");
+		(function(){
+			console.log("hello world!");
+		})();
+
+
+		console.log("--------------bind--------------------");
+		function fun(x,y){
+			return this.x+x+y;
+		}
+		var b={x:1};
+		var f1=fun.bind(b,1,2);
+		console.log(f1());
+
+
+		console.log("--------------------------Function------------------------");
+		var global="global";
+		function fu(){
+			var global="local";
+			var f=new Function("return global");
+			return f();
+
+		}
+		console.log(fu());
+		console.log(fu.call(null));
+
+
+		console.log("---------------高阶函数----------------");
+		function not(f){
+			return function(){
+			   return !f.apply(this,arguments);
+			}
+		}
+
+		function even(data){
+			return data%2==0;
+		}
+
+		var odd=not(even);
+		console.log([1,2,3,4,5,6].map(odd));
+
+		console.log("---------------缓存------------------");
+		var cache=[];
+		function mem(f){
+			return function(){
+				var k=arguments.length+Array.prototype.join.call(arguments,",");
+				if(k in cache)
+					return cache[k];
+				else
+					return cache[k]=f.apply(this,arguments);
+			}
+		}
+
+		var fa=mem(function(n){
+			if(n>1)
+				return fa(n-1)*n;
+			else
+				return 1;
+		});
+
+		console.log(fa(10));
+		console.log(cache);
+
+
+		console.log("------------------不完全函数-----------------------")
+		function fun_helf(f){
+			var arg=arguments;
+			return function(){
+				var a=Array.prototype.slice.call(arguments,0);
+				a=a.concat(Array.prototype.slice.call(arg,1));
+				return f.apply(this,a);
+			}
+		}
+
+		function helf(x,y){
+			var total=0;
+			for (var i = 0; i < arguments.length; i++) {
+				total+=arguments[i];
+			}
+			return total;
+		}
+		console.log(fun_helf(helf,1,2,3)(4,5,6));
+		console.log(fun_helf(helf)(1,2,3,4,5,6));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
