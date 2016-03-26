@@ -1,0 +1,2 @@
+决git中push origin master出错：error: src refspec master does not match any
+先去add，再commit，然后再push，就可以了：

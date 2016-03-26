@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="jquery.js" type="text/javascript" charset="utf-8">
+		
+	</script>
+	<style type="text/css" media="screen">
+		.container{
+			border: 1px solid red;
+		}
+		.form .line{
+			padding: 10px;
+		}
+		.line:nth-child(2n){
+			background-color: red;
+		}
+		
+	</style>
+
+	<script type="text/javascript">
+		// $(function(){
+		// 	$("#submit").click(function(){
+		// 		var name=$("#name").val();
+		// 		var sex;
+		// 		if($("#male").is(":checked")){
+		// 			sex="男";
+		// 		}else if($("#female").is(":checked")){
+		// 			sex="女";
+		// 		}else{
+		// 			alert("请选择性别！");
+		// 			return ;
+		// 		}
+		// 		var ismarried=$("#ismarried").is(":checked")? "是":"否";
+		// 		$("#result").html(name+";"+sex+";"+ismarried);
+
+		// 	})
+
+		// })
+
+		window.onload=function(){
+			document.getElementById("submit").onclick=function(){
+				var name=document.getElementById('name').value;
+				var sex;
+				if(document.getElementById("male").checked){
+					sex="男";
+				}else if(document.getElementById("female").checked){
+					sex="女";
+				}else{
+					alert("请选择性别!!");
+				}
+				var ismarried=document.getElementById("ismarried").checked? "是":"否";
+				document.getElementById("result").innerHTML=name+";"+sex+";"+ismarried;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div>
+			请输入以下信息
+		</div>
+		<div class="form">
+			<div class="userinfo">
+				<div class="line">
+					<label for="name">姓名</label>
+					<input type="text" id="name" name="" value="" placeholder="">
+				</div>
+				<div class="line">
+					<label for="sex">性别</label>
+					<input type="radio" name="sex" id="male" value="" placeholder="">男
+					<input type="radio" name="sex" id="female" value="" placeholder="">女
+				</div>
+				<div class="line">
+					<label for="marry">婚否</label>
+					<input type="checkbox" id="ismarried" name="" value="">
+				</div>
+				<div class="line">
+					<input type="submit" name="" id="submit" value="提交">
+				</div>
+			</div>
+		</div>
+		<div class="result" id="result"></div>
+	</div>
+</body>
+</html>
