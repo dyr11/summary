@@ -1,5 +1,5 @@
 .svn
-*chm
+*.chm
 *doc
 *docx
 node_modules/
