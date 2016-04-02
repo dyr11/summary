@@ -1,4 +1,6 @@
 .svn
-
+*chm
 *doc
 *docx
+node_modules/
+framework/
