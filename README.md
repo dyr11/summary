@@ -1,4 +1,6 @@
 # jquery
+
+<pre>
 (function(global){
 	var jquery=function(ele,context){
 			//console.log(this);
@@ -39,4 +41,4 @@
 	var d=$();
 	console.log(d instanceof jquery)
 	d.test();
-
+</pre>
