@@ -38,12 +38,12 @@ function readFromDIO($f){
 			$cache.=$tmp;
 		}
 		echo $tmp;
-		save($tmp);
+		save($tmp,"PM");
 	}
 }
-function save($tmp){
+function save($tmp,$fileName){
 	$pre=$tmp;
-	$file=fopen("PM.txt","a+");
+	$file=fopen("$fileName.txt","a+");
 	fwrite($file,$tmp);
 
 }
@@ -55,12 +55,14 @@ function test($cache){
 		$row=$result[0];
 		preg_match_all('/\d+(\.\d*)?/',$row,$res);
 		$out=$res[0];
-		print_r($out);
+		//print_r($out);
+		//save(implode($out),"SQL")
 		inserToDB($out);
+		$cache="";
 	}else{
 		echo "error data!\r\n";
 	}
-	$cache="";
+	
 
 /*	Array
 (
@@ -79,7 +81,9 @@ function test($cache){
 mysql_connect("localhost","root","root");
 mysql_select_db("");
 function insertToDB($data){
-	$sql="insert into PM(temp,humi,tol,RSV,Voltage,Dust,Density)values($data[0],$data[1],$data[2],$data[5],$data[6],$data[7],$data[8])";
+	$time=date("Y-m-d H:i:s",time());
+	$sql="insert into PM(temp,humi,tol,RSV,Voltage,Dust,Density,time)values('$data[0]','$data[1]','$data[2]','$data[5]','$data[6]','$data[7]','$data[8]',$time)";
+	save($sql+"\r\n","SQL");
 	mysql_query($sql);
 	$uid=mysql_insert_id();
 	if($uid!=0){

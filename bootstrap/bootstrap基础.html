@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keyword" content="bootstrap">
+	<meta name="descriptions" content="content">
+	<title>bootstrap基础</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+			counter-reset: legent;
+		}
+		fieldset legend{
+			background-color: green;
+			text-align: center;
+		}
+		legend:before{
+			counter-increment: legent;
+			content: counter(legent) ".";
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+		<legend>标题1</legend>
+		<!--Bootstrap中的标题-->
+		<h1>Bootstrap标题一</h1>
+		<h2>Bootstrap标题二</h2>
+		<h3>Bootstrap标题三</h3>
+		<h4>Bootstrap标题四</h4>
+		<h5>Bootstrap标题五</h5>
+		<h6>Bootstrap标题六</h6>
+
+		<!--Bootstrap中让非标题元素和标题使用相同的样式-->
+		<div class="h1">Bootstrap标题一</div>
+		<div class="h2">Bootstrap标题二</div>
+		<div class="h3">Bootstrap标题三</div>
+		<div class="h4">Bootstrap标题四</div>
+		<div class="h5">Bootstrap标题五</div>
+		<div class="h6">Bootstrap标题六</div>
+
+		<!--任务填写下方-->
+		<h1>我的第一个bootstrap标题</h1>
+	</fieldset>
+
+	<fieldset>
+		<legend>标题2</legend>
+		<!--Bootstrap中使用了<small>标签来制作副标题-->
+		<h1>Bootstrap标题一<small>我是副标题</small></h1>
+		<h2>Bootstrap标题二<small>我是副标题</small></h2>
+		<h3>Bootstrap标题三<small>我是副标题</small></h3>
+		<h4>Bootstrap标题四<small>我是副标题</small></h4>
+		<h5>Bootstrap标题五<small>我是副标题</small></h5>
+		<h6>Bootstrap标题六<small>我是副标题</small></h6>
+
+		<!--任务填写处-->
+
+		<h1>孤儿院无私奉献30年<small>一曲人性的赞歌</small></h1>
+	</fieldset>
+
+	<fieldset>
+		<legend>段落</legend>
+		<p>超酷的互联网、IT技术免费学习平台，创新的网络一站式学习、实践体验；服务及时贴心，内容专业、有趣易学。专注服务互联网工程师快速成为技术高手！</p>
+		<p>超酷的互联网、IT技术免费学习平台，创新的网络一站式学习、实践体验；服务及时贴心，内容专业、有趣易学。专注服务互联网工程师快速成为技术高手！</p>
+		<!--下面是代码任务部分-->
+		<p>我是赢段落，你猜我在Bootstrap是以什么样的风格显示</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>强调内容</legend>
+		<p>我是一个普通的段落，我不需要强调显示</p>
+		<p class="lead">这部分内容需要特别的强调，我和别人长的不一样</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>加粗</legend>
+		<p>我在学习<strong>Bootstrap</strong>，我要掌握<strong>Bootstrap</strong>的所有知识。</p>
+		<!--下面是任务部分-->
+		<p>我是一个段落，这个段落中“<strong>强调</strong>”一词将会加粗显示。</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>斜体</legend>
+		<p>我在慕课网上跟<em>大漠</em>一起学习<i>Bootstrap</i>的使用。我一定要学会<i>Bootstrap</i>。</p>
+		<!--下面是任务部分-->
+		<p>我正在学习<i>Bootstrap</i>。我发现<em>Bootstrap</em>真的好强大。</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>强调相关的类</legend>
+		<div class="text-muted">.text-muted 效果</div>
+		<div class="text-primary">.text-primary效果</div>
+		<div class="text-success">.text-success效果</div>
+		<div class="text-info">.text-info效果</div>
+		<div class="text-warning">.text-warning效果</div>
+		<div class="text-danger">.text-danger效果</div>
+		<!--下面是任务部分-->
+		<p class="text-danger">我是一段危险信息，请用Bootstrap框架中的危险风格显示</p>
+	</fieldset>	
+
+	<fieldset>
+		<legend>文本对齐风格</legend>
+		<p class="text-left">我居左</p>
+		<p class="text-center">我居中</p>
+		<p class="text-right">我居右</p>
+		<p class="text-justify">There is clearly a need for CSS to be taken seriously by graphic artists. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The code remains the same, the only thing that has changed is the external .css file. </p>
+		<!--下面是任务部分-->
+		<p class="text-right">给我加个类，我就向右对齐。</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>列表简介</legend>
+		<ul>
+			<li>无序列表信息1</li>
+			<li>无序列表信息2</li>
+			<li>无序列表信息3</li>
+		</ul>
+		<ol>
+			<li>有序列表信息1</li>
+			<li>有序列表信息2</li>
+			<li>有序列表信息3</li>
+		</ol>
+		<dl>
+			<dt>定义列表标题</dt>
+			<dd>定义列表信息1</dd>
+			<dd>定义列表信息2</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>列表-无序列表、有序列表</legend>
+		<h5>普通列表</h5>
+		<ul>
+			<li>列表项目</li>
+			<li>列表项目</li>
+			<li>列表项目</li>
+			<li>列表项目</li>
+			<li>列表项目</li>
+		</ul>
+		<h5>有序列表</h5>
+		<ol>
+			<li>项目列表一</li>
+			<li>项目列表二</li>
+			<li>项目列表三</li>
+		</ol>
+		<h5>有序列表嵌套</h5>
+		<ol>
+			<li>有序列表</li>
+			<li>
+				有序列表
+				<ol>
+					<li>有序列表(2)</li>
+					<li>有序列表(2)</li>
+				</ol>
+			</li>
+			<li>有序列表</li>
+		</ol>
+		<!--下面是代码任务部分-->
+		<ul>
+			<li>列表项目1</li>
+			<li>列表项目2</li>
+			<li>列表项目3</li>
+			<li>列表项目4</li>
+			<li>列表项目5</li>
+		</ul>
+
+	</fieldset>
+
+	<fieldset>
+		<legend>列表-去点列表</legend>
+		<!--无序列表去点-->
+		<ul>
+			<li>
+				项目列表
+				<ul>
+					<li>带有项目符号</li>
+					<li>带有项目符号</li>
+				</ul>
+			</li>
+			<li>
+				项目列表
+				<ul class="list-unstyled">
+					<li>不带项目符号</li>
+					<li>不带项目符号</li>
+				</ul>
+			</li>
+			<li>项目列表</li>
+		</ul>
+		<!--有序列表去序号-->
+		<ol>
+			<li>
+				项目列表
+				<ol>
+					<li>带有项目编号</li>
+					<li>带有项目编号</li>
+				</ol>
+			</li>
+			<li>
+				项目列表
+				<ol class="list-unstyled">
+					<li>不带项目编号</li>
+					<li>不带项目编号</li>
+				</ol>
+			</li>
+			<li>项目列表</li>
+		</ol>
+		<!--下面是代码任务部分-->
+		<ol>
+			<li>有序项目列表一</li>
+			<li>有序项目列表二
+				<ol class="list-unstyled">
+					<li>有序二级项目列表一</li>
+					<li>有序二级项目列表二
+						<ul>
+							<li>无序列表项目列表一</li>
+							<li>无序列表项目列表二
+								<ul class="list-unstyled">
+									<li>无序四级项目列表一</li>
+									<li>无序四级项目列表二</li>
+								</ul>
+							</li>
+							<li>无序列表项目列表三</li>
+						</ul>
+					</li>
+					<li>有序二级项目列表三</li>
+				</ol>
+			</li>
+			<li>有序项目列表三</li>
+		</ol>
+
+	</fieldset>
+
+	<fieldset>
+		<legend>列表--内联列表</legend>
+		<ul class="list-inline">
+			<li>W3cplus</li>
+			<li>Blog</li>
+			<li>CSS3</li>
+			<li>jQuery</li>
+			<li>PHP</li>
+		</ul>
+		<!--下面是代码任务部分-->
+		<ul class="list-unstyled">
+			<li>城市：</li>
+			<li>
+				<ul class="list-inline">
+					<li>北京</li>
+					<li>上海</li>
+					<li>南京</li>
+					<li>厦门</li>
+				</ul>  
+			</li>
+		</ul>
+	</fieldset>
+
+	<fieldset>
+		<legend>列表--定义列表</legend>
+		<dl>
+			<dt>W3cplus</dt>
+			<dd>一个致力于推广国内前端行业的技术博客</dd>
+			<dt>慕课网</dt>
+			<dd>一个真心在做教育的网站</dd>
+		</dl>
+		<!--下面是代码任务部分-->
+		<dl>
+			<dt>北京</dt>
+			<dd>北京市中国的首都模式政治文化集中地</dd>
+			<dt>上海</dt>
+			<dd>上海号称东方的巴黎</dd>
+		</dl>
+
+	</fieldset>
+
+	<fieldset>
+		<legend>列表--水平定义列表</legend>
+		<dl class="dl-horizontal">
+			<dt>W3cplus</dt>
+			<dd>一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文</dd>
+			<dt>慕课网</dt>
+			<dd>一个专业的，真心实意在做培训的网站</dd>
+			<dt>我来测试一个标题，我来测试一个标题</dt>
+			<dd>我在写一个水平定义列表的效果，我在写一个水平定义列表的效果</dd>
+		</dl>
+		<!--下面是代码任务部分-->
+		<dl class="dl-horizontal">
+			<dt>标题一:</dt>
+			<dd>描述内容</dd>
+			<dt>标题二:</dt>
+			<dd>描述内容</dd>
+		</dl>
+
+	</fieldset>
+
+
+	<fieldset>
+		<legend>代码一</legend>
+		code风格：
+		<div>Bootstrap的代码风格有三种：<code>&lt;code&gt;</code>、<code>&lt;pre&gt;</code>和<code>&lt;kbd&gt;</code></div>
+		pre风格：
+		<div>
+			<pre>
+				&lt;ul&gt;
+				&lt;li&gt;...&lt;/li&gt;
+				&lt;li&gt;...&lt;/li&gt;
+				&lt;li&gt;...&lt;/li&gt;
+				&lt;/ul&gt;
+			</pre>
+		</div>
+		kbd风格：
+		<div>请输入<kbd>ctrl+c</kbd>来复制代码，然后使用<kbd>ctrl+v</kbd>来粘贴代码</div>
+
+
+		<!--下面是代码任务部分-->
+
+		<p>请使用<kbd>ctrl+x</kbd>复制代码，然后使用<kbd>ctrl+shift+v</kbd>将复制的代码粘贴到需要的地方。</p>
+
+	</fieldset>
+
+	<fieldset>
+		<legend>代码二</legend>
+		高度超出340px，就会在Y轴出现滚动条
+		<!--下面是代码任务部分-->
+		<pre class="pre-scrollable">
+			<ol>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+				<li>....</li>
+			</ol>
+		</pre>
+	</fieldset>
+
+	<fieldset>
+		<legend>表格</legend>
+		<h1>基础表格</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>表格标题</th>
+					<th>表格标题</th>
+					<th>表格标题</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+			</tbody>
+		</table>
+		<h1>斑马线表格</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>表格标题</th>
+					<th>表格标题</th>
+					<th>表格标题</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+			</tbody>
+		</table>
+		<h1>带边框的表格</h1>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>表格标题</th>
+					<th>表格标题</th>
+					<th>表格标题</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+			</tbody>
+		</table>
+		<h1>鼠标悬浮高亮的表格</h1>
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>表格标题</th>
+					<th>表格标题</th>
+					<th>表格标题</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+			</tbody>
+		</table>
+		<h1>紧凑型表格</h1>
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>表格标题</th>
+					<th>表格标题</th>
+					<th>表格标题</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+			</tbody>
+		</table>
+		<h1>响应式表格</h1>
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>表格标题</th>
+						<th>表格标题</th>
+						<th>表格标题</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>表格--表格行的类</legend>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>类名</th>
+					<th>描述</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="active">
+					<td>.active</td>
+					<td>表示当前活动的信息</td>
+				</tr>
+				<tr class="success">
+					<td>.success</td>
+					<td>表示成功或者正确的行为</td>
+				</tr>
+				<tr class="info">
+					<td>.info</td>
+					<td>表示中立的信息或行为</td>
+				</tr>
+				<tr class="warning">
+					<td>.warning</td>
+					<td>表示警告，需要特别注意</td>
+				</tr>
+				<tr class="danger">
+					<td>.danger</td>
+					<td>表示危险或者可能是错误的行为</td>
+				</tr>
+			</tbody>
+		</table> 
+	</fieldset>
+
+	<fieldset>
+		<legend>表格--基础表格</legend>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>表格标题</th>
+					<th>表格标题</th>
+					<th>表格标题</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+				<tr>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+					<td>表格单元格</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</fieldset>
+
+	<fieldset>
+		<legend>基础表单</legend>
+		<form role="form">
+			<div class="form-group">
+				<label for="exampleInputEmail1">邮箱：</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的邮箱地址">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">密码</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入您的邮箱密码">
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> 记住密码
+				</label>
+			</div>
+			<button type="submit" class="btn btn-default">进入邮箱</button>
+		</form>	
+	</fieldset>
+
+	<fieldset>
+		<legend>水平表单</legend>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="inputEmail3" placeholder="请输入您的邮箱地址">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="inputPassword3" placeholder="请输入您的邮箱密码">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> 记住密码
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">进入邮箱</button>
+				</div>
+			</div>
+		</form>
+	</fieldset>
+
+	<fieldset>
+		<legend>内联表单</legend>
+		<form class="form-inline" role="form">
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputEmail2">邮箱</label>
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="请输入你的邮箱地址">
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputPassword2">密码</label>
+				<input type="password" class="form-control" id="exampleInputPassword2" placeholder="请输入你的邮箱密码">
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> 记住密码
+				</label>
+			</div>
+			<button type="submit" class="btn btn-default">进入邮箱</button>
+		</form>  
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件--输入框input</legend>
+		<form role="form">
+			<div class="form-group">
+				<input type="email" class="form-control" placeholder="Enter email">
+
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Enter username">
+			</div>
+		</form> 
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件--下拉选择框select</legend>
+		<form role="form">
+			<div class="form-group">
+				<select class="form-control"> 
+					<option>1</option> 
+					<option>2</option> 
+					<option>3</option> 
+					<option>4</option> 
+					<option>5</option> 
+				</select>
+			</div>
+			<div class="form-group">
+				<select multiple class="form-control"> 
+					<option>1</option> 
+					<option>2</option> 
+					<option>3</option> 
+					<option>4</option> 
+					<option>5</option> 
+				</select>
+			</div>
+
+			<div class="form-group">
+				<select multiple class="form-control">
+					<option>踢足球</option>
+					<option>游泳</option>
+					<option>慢跑</option>
+					<option>跳舞</option>
+				</select>
+			</div>
+
+		</form>   
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件--文本域textarea</legend>
+		<form role="form">
+			<div class="form-group">
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+		</form>  
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件--复选框checkbox</legend>
+		<form role="form">
+			<h3>案例1</h3>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="">
+					记住密码
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>
+					喜欢
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios2" value="hate">
+					不喜欢
+				</label>
+			</div>
+		</form>     
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件--复选框和单选按钮水平排列</legend>
+		<form role="form">
+			<div class="form-group">
+				<label class="radio-inline">
+					<input type="radio" name="sex">男性
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="sex">女性
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="sex">中性
+				</label>
+			</div>
+		</form>
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件--按钮</legend>
+		<table class="table table-bordered table-striped">  
+			<thead>  
+				<tr>  
+					<th>Button</th>  
+					<th>class=""</th>  
+					<th>Description</th>  
+				</tr>  
+			</thead>  
+			<tbody>  
+				<tr>  
+					<td><button class="btn" href="#">Default</button></td>  
+					<td><code>btn</code></td>  
+					<td>Standard gray button with gradient</td>  
+				</tr>  
+				<tr>  
+					<td><button class="btn btn-primary" href="#">Primary</button></td>  
+					<td><code>btn btn-primary</code></td>  
+					<td>Provides extra visual weight and identifies the primary action in a set of buttons</td>  
+				</tr>  
+				<tr>  
+					<td><button class="btn btn-info" href="#">Info</button></td>  
+					<td><code>btn btn-info</code></td>  
+					<td>Used as an alternative to the default styles</td>  
+				</tr>  
+				<tr>  
+					<td><button class="btn btn-success" href="#">Success</button></td>  
+					<td><code>btn btn-success</code></td>  
+					<td>Indicates a successful or positive action</td>  
+				</tr>  
+				<tr>  
+					<td><button class="btn btn-warning" href="#">Warning</button></td>  
+					<td><code>btn btn-warning</code></td>  
+					<td>Indicates caution should be taken with this action</td>  
+				</tr>  
+				<tr>  
+					<td><button class="btn btn-danger" href="#">Danger</button></td>  
+					<td><code>btn btn-danger</code></td>  
+					<td>Indicates a dangerous or potentially negative action</td>  
+				</tr>  
+				<tr>  
+					<td><button class="btn btn-inverse" href="#">Inverse</button></td>  
+					<td><code>btn btn-inverse</code></td>  
+					<td>Alternate dark gray button, not tied to a semantic action or use</td>  
+				</tr>  
+			</tbody>  
+		</table>    
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件的大小</legend>
+		<h1>案例1</h1>
+		<form role="form">
+			<div class="form-group">
+				<label class="control-label">控件变大</label>
+				<input class="form-control input-lg" type="text" placeholder="添加.input-lg，控件变大">
+			</div>
+			<div class="form-group">
+				<label class="control-label">正常大小</label>
+				<input class="form-control" type="text" placeholder="正常大小">
+			</div>  
+			<div class="form-group">
+				<label class="control-label">控件变小</label>
+				<input class="form-control input-sm" type="text" placeholder="添加.input-sm，控件变小">
+			</div> 
+		</form> 
+		<br>
+		<br>
+		<br>
+		<h1>案例2</h1>
+		<form role="form" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-xs-4">
+					<input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+				</div>
+				<div class="col-xs-4">
+					<input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+				</div>
+				<div class="col-xs-4">
+					<input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-6"><input class="form-control" type="text" placeholder=".col-xs-6"></div>
+				<div class="col-xs-6"><input class="form-control" type="text" placeholder=".col-xs-6"></div>
+
+			</div>  
+			<div class="form-group">
+				<div class="col-xs-5">
+					<input class="form-control input-sm" type="text" placeholder=".col-xs-5">
+				</div>
+				<div class="col-xs-7">
+					<input class="form-control input-sm" type="text" placeholder=".col-xs-7">
+				</div>
+			</div> 
+		</form>
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件的状态--焦点状态</legend>
+
+		<form role="form" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-xs-6">
+					<input class="form-control input-lg" type="text" placeholder="不是焦点状态下效果">
+				</div>
+				<div class="col-xs-6">
+					<input class="form-control input-lg" type="text" placeholder="焦点点状态下效果">
+				</div>
+			</div> 
+			<div class="form-group">
+				<div class="col-xs-4"><input class="form-control input-lg" type="file"></div>
+				<div class="col-xs-4"><input class="form-control input-lg" type="radio"></div>
+				<div class="col-xs-4"><input class="form-control input-lg" type="checkbox"></div>
+			</div>
+		</form>
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件的状态--禁用状态</legend>
+		<h3>示例1</h3>
+		<form role="form" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-xs-6">
+					<input class="form-control input-lg" type="text" placeholder="不是焦点状态下效果">
+				</div>
+				<div class="col-xs-6">
+					<input class="form-control input-lg" id="disabledInput" type="text" placeholder="表单已被禁用，不可输入" disabled>
+				</div>
+			</div> 
+		</form> 
+		<br>
+		<br>
+		<br>
+		<h3>示例2</h3>   
+		<form role="form">
+			<fieldset disabled>
+				<div class="form-group">
+					<label for="disabledTextInput">禁用的输入框</label>
+					<input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+				</div>
+				<div class="form-group">
+					<label for="disabledSelect">禁用的下拉框</label>
+					<select id="disabledSelect" class="form-control">
+						<option>不可选择</option>
+					</select>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> 无法选择
+					</label>
+				</div>
+				<button type="submit" class="btn btn-primary">提交</button>
+			</fieldset>
+		</form> 
+		<br>
+		<br>
+		<br>
+		<h3>示例3</h3>
+		<form role="form">
+			<fieldset disabled>
+				<legend><input type="text" class="form-control" placeholder="显然我颜色变灰了，但是我没被禁用，不信？单击试一下" /></legend>
+				<div class="form-group">
+					<label for="disabledTextInput">禁用的输入框</label>
+					<input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+				</div>
+				<div class="form-group">
+					<label for="disabledSelect">禁用的下拉框</label>
+					<select id="disabledSelect" class="form-control">
+						<option>不可选择</option>
+					</select>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> 无法选择
+					</label>
+				</div>
+				<button type="submit" class="btn btn-primary">提交</button>
+			</fieldset>
+		</form>  
+	</fieldset>
+
+	<fieldset>
+		<legend>表单控件状态--验证状态</legend>
+		<h3>示例1</h3>
+		<form role="form">
+			<div class="form-group has-success">
+				<label class="control-label" for="inputSuccess1">成功状态</label>
+				<input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+			</div>
+			<div class="form-group has-warning">
+				<label class="control-label" for="inputWarning1">警告状态</label>
+				<input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+			</div>
+			<div class="form-group has-error">
+				<label class="control-label" for="inputError1">错误状态</label>
+				<input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+			</div>
+		</form>  
+		<br>
+		<br>
+		<br>
+		<h3>示例2</h3>   
+		<form role="form">
+			<div class="form-group has-success has-feedback">
+				<label class="control-label" for="inputSuccess1">成功状态</label>
+				<input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			</div>
+			<div class="form-group has-warning has-feedback">
+				<label class="control-label" for="inputWarning1">警告状态</label>
+				<input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+				<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+			</div>
+			<div class="form-group has-error has-feedback">
+				<label class="control-label" for="inputError1">错误状态</label>
+				<input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>  
+			</div>
+			<div class="form-group has-error has-feedback">
+				<label class="control-label" for="email">email地址</label>
+				<input type="emial" name="email" class="form-control" placeholder="错误状态" >
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+			</div>
+		</form>
+	</fieldset>
+
+	<fieldset>
+		<legend>表单提示信息</legend>
+		<h3>示例1</h3>
+		<form role="form">
+			<div class="form-group has-success has-feedback">
+				<label class="control-label" for="inputSuccess1">成功状态</label>
+				<input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+				<span class="help-block">你输入的信息是正确的</span>
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			</div>
+			<div class="form-group has-warning has-feedback">
+				<label class="control-label" for="inputWarning1">警告状态</label>
+				<input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+				<span class="help-block">请输入正确信息</span>
+				<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+			</div>
+			<div class="form-group has-error has-feedback">
+				<label class="control-label" for="inputError1">错误状态</label>
+				<input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+				<span class="help-block">你输入的信息是错误的</span>
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>  
+			</div>
+		</form>    
+		<br>
+		<br>
+		<br>
+		<h3>示例2</h3>
+		<form role="form">
+			<div class="form-group">
+				<label class="control-label" for="inputSuccess1">成功状态</label>
+				<div class="row">
+					<div class="col-xs-6">
+						<input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+					</div>
+					<span class="col-xs-6 help-block">你输入的信息是正确的</span>
+				</div>
+			</div> 
+		</form> 
+	</fieldset>
+
+	<fieldset>
+		<legend>按钮</legend>
+		<button class="btn" type="button">基础按钮.btn</button>  
+		<button class="btn btn-default" type="button">默认按钮.btn-default</button> 
+		<button class="btn btn-primary" type="button">主要按钮.btn-primary</button> 
+		<button class="btn btn-success" type="button">成功按钮.btn-success</button> 
+		<button class="btn btn-info" type="button">信息按钮.btn-info</button> 
+		<button class="btn btn-warning" type="button">警告按钮.btn-warning</button> 
+		<button class="btn btn-danger" type="button">危险按钮.btn-danger</button> 
+		<button class="btn btn-link" type="button">链接按钮.btn-link</button> 
+	</fieldset>
+
+	<fieldset>
+		<legend>button多标签支持</legend>
+		<button class="btn btn-default" type="button">button标签按钮</button> 
+		<input type="submit" class="btn btn-default" value="input标签按钮"/>
+
+		<span class="btn btn-default">span标签按钮</span>  
+		<div class="btn btn-default">div标签按钮</div> 
+		<a href="#" class="btn btn-default">a标签按钮</a>
+	</fieldset>
+
+	<fieldset>
+		<legend>按钮大小</legend>
+		<button class="btn btn-primary btn-lg" type="button">大型按钮.btn-lg</button> 
+		<button class="btn btn-primary" type="button">正常按钮</button>
+		<button class="btn btn-primary btn-sm" type="button">小型按钮.btn-sm</button>
+		<button class="btn btn-primary btn-xs" type="button">超小按钮.btn-xs</button>
+	</fieldset>
+
+	<fieldset>
+		<legend>块状按钮</legend>
+		<button class="btn btn-primary btn-block btn-lg" type="button">大型按钮.btn-lg</button> 
+		<button class="btn btn-primary btn-block" type="button">正常按钮</button>
+		<button class="btn btn-primary btn-sm btn-block" type="button">小型按钮.btn-sm</button>
+		<button class="btn btn-primary btn-xs btn-block" type="button">超小型按钮.btn-xs</button>   
+
+	</fieldset>
+
+	<fieldset>
+		<legend>按钮状态--引用状态</legend>
+		<button class="btn btn-primary btn-lg btn-block" type="button" disabled="disabled">通过disabled属性禁用按钮</button> 
+		<button class="btn btn-primary btn-block disabled" type="button">通过添加类名disabled禁用按钮</button>
+		<button class="btn btn-primary btn-sm btn-block" type="button">未禁用的按钮</button>
+	</fieldset>
+
+	<fieldset>
+		<legend>图像</legend>
+		<!doctype html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>图像</title>
+			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		</head>
+		<body>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<img   alt="140x140" src="http://placehold.it/140x140">
+						<div>默认图片</div>
+					</div>
+					<div class="col-sm-4">
+						<img  class="img-rounded" alt="140x140" src="http://placehold.it/140x140"> 
+						<div>圆角图片</div>
+					</div>
+					<div class="col-sm-4">
+						<img  class="img-circle" alt="140x140" src="http://placehold.it/140x140">
+						<div>圆形图片</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<img  class="img-thumbnail" alt="140x140" src="http://placehold.it/140x140"> 
+							<div>缩略图</div>
+						</div>
+						<div class="col-sm-6">
+							<div>响应式图片</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</body>
+		</html>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+		<a href="http://img.mukewang.com/53db0e5b0001aff810560855.jpg" title="">
+			<img src="http://img.mukewang.com/53db0e5b0001aff810560855.jpg" alt="glyphicon" title="glyphicon">
+		</a>
+		<br>
+		<span class="glyphicon glyphicon-search"></span>
+		<span class="glyphicon glyphicon-asterisk"></span>
+		<span class="glyphicon glyphicon-plus"></span>
+		<span class="glyphicon glyphicon-cloud"></span>
+		<h2><a href="http://getbootstrap.com/components/#glyphicons" target="_blank">跟多字体图标</a></h2>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+</body>
+</html>

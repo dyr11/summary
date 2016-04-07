@@ -36,12 +36,12 @@ function readFromDIO($f){
 			$cache.=$tmp;
 		}
 		echo $tmp;
-		save($tmp);
+		save($tmp,"IR");
 	}
 }
-function save($tmp){
+function save($tmp,$fileName){
 	$pre=$tmp;
-	$file=fopen("IR.txt","a+");
+	$file=fopen("$fileName.txt","a+");
 	fwrite($file,$tmp);
 
 }
@@ -67,7 +67,9 @@ function test($cache){
 mysql_connect("localhost","root","root");
 mysql_select_db("");
 function insertToDB($data){
-	$sql="insert into PM(value)values($data[0])";
+	$time=date("Y-m-d H:i:s",time());
+	$sql="insert into PM(value,time)values('$data[0])',$time";
+	save($sql+"\r\n","IRSQL");
 	mysql_query($sql);
 	$uid=mysql_insert_id();
 	if($uid!=0){
