@@ -21,6 +21,8 @@
 			content: counter(legent) ".";
 		}
 	</style>
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
 </head>
 <body>
 	<fieldset>
@@ -1078,45 +1080,36 @@
 
 	<fieldset>
 		<legend>图像</legend>
-		<!doctype html>
-		<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<title>图像</title>
-			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		</head>
-		<body>
-			<div class="container">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<img   alt="140x140" src="http://placehold.it/140x140">
+					<div>默认图片</div>
+				</div>
+				<div class="col-sm-4">
+					<img  class="img-rounded" alt="140x140" src="http://placehold.it/140x140"> 
+					<div>圆角图片</div>
+				</div>
+				<div class="col-sm-4">
+					<img  class="img-circle" alt="140x140" src="http://placehold.it/140x140">
+					<div>圆形图片</div>
+				</div>
 				<div class="row">
-					<div class="col-sm-4">
-						<img   alt="140x140" src="http://placehold.it/140x140">
-						<div>默认图片</div>
+					<div class="col-sm-6">
+						<img  class="img-thumbnail" alt="140x140" src="http://placehold.it/140x140"> 
+						<div>缩略图</div>
 					</div>
-					<div class="col-sm-4">
-						<img  class="img-rounded" alt="140x140" src="http://placehold.it/140x140"> 
-						<div>圆角图片</div>
-					</div>
-					<div class="col-sm-4">
-						<img  class="img-circle" alt="140x140" src="http://placehold.it/140x140">
-						<div>圆形图片</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<img  class="img-thumbnail" alt="140x140" src="http://placehold.it/140x140"> 
-							<div>缩略图</div>
-						</div>
-						<div class="col-sm-6">
-							<div>响应式图片</div>
-						</div>
+					<div class="col-sm-6">
+						<div>响应式图片</div>
 					</div>
 				</div>
-			</div> 
-		</body>
-		</html>
+			</div>
+		</div> 
+
 	</fieldset>
 
 	<fieldset>
-		<legend></legend>
+		<legend>图标</legend>
 		<a href="http://img.mukewang.com/53db0e5b0001aff810560855.jpg" title="">
 			<img src="http://img.mukewang.com/53db0e5b0001aff810560855.jpg" alt="glyphicon" title="glyphicon">
 		</a>
@@ -1126,6 +1119,394 @@
 		<span class="glyphicon glyphicon-plus"></span>
 		<span class="glyphicon glyphicon-cloud"></span>
 		<h2><a href="http://getbootstrap.com/components/#glyphicons" target="_blank">跟多字体图标</a></h2>
+	</fieldset>
+
+	<fieldset>
+		<legend>网格系统--基本用法</legend>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-8">.col-md-8</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">.col-md-3</div>
+				<div class="col-md-6">.col-md-6</div>
+				<div class="col-md-3">.col-md-3</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>网格系统--基本用法</legend>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-8">.col-md-8</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">.col-md-3</div>
+				<div class="col-md-6">.col-md-6</div>
+				<div class="col-md-3">.col-md-3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-8">col-md-8</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-4">col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">col-md-3</div>
+				<div class="col-md-6">col-md-6</div>
+				<div class="col-md-3">col-md-3</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>网格系统--列偏移</legend>
+		<div class="container">
+			<h4>列向右移动四列的间距</h4>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+				<div class="col-md-2">.col-md-3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+			</div>
+		</div>
+		<br />
+		<h4>发生行断裂</h4>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+				<div class="col-md-2">.col-md-3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">.col-md-3</div>
+				<div class="col-md-3 col-md-offset-3">col-md-offset-3</div>
+				<div class="col-md-4">col-md-4</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">.col-md-2</div>
+			<div class="col-md-offset-1 col-md-2">col-md-offset-1 col-md-2</div>
+			<div class="col-md-offset-1 col-md-2">col-md-offset-1 col-md-2</div>
+			<div class="col-md-offset-1 col-md-3">col-md-offset-1 col-md-3</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>网格系统--列交换</legend>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-push-8">.col-md-4</div>
+				<div class="col-md-8 col-md-pull-4">.col-md-8</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<style type="text/css">
+			[class *= col-] [class *= col-] {
+				background-color: #f36;
+				border:1px dashed #fff;
+				color: #fff;
+			}
+		</style>
+		<legend>网格系统--列嵌套</legend>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					我的里面嵌套了一个网格
+					<div class="row">
+						<div class="col-md-6">col-md-6</div>
+						<div class="col-md-6">col-md-6</div>
+					</div>
+				</div>
+				<div class="col-md-4">col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-8">
+					我的里面嵌套了一个网格
+					<div class="row">
+						<div class="col-md-4">col-md-4</div>
+						<div class="col-md-4">col-md-4</div>
+						<div class="col-md-4">col-md-4</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">col-md-8
+					<div class="row">
+						<div class="col-md-8">col-md-8</div>
+						<div class="col-md-4">col-md-4</div>
+					</div>
+				</div>
+				<div class="col-md-4">col-md-4
+					<div class="row">
+						<div class="col-md-9">col-md-9</div>
+						<div class="col-md-3">col-md-3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>下拉菜单</legend>
+		
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				下拉菜单
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+			</ul>
+		</div> 
+
+		<div class="dropdown">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">选择你喜欢的水果
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a>苹果</a></li>
+				<li><a>香蕉</a></li>
+				<li><a>梨</a></li>
+				<li><a>桃</a></li>
+			</ul>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>下拉菜单--下拉分隔线</legend>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				下拉菜单
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+			</ul>
+		</div> 
+
+		<div class="dropdown">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+				食物<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a>苹果</a></li>
+				<li><a>香蕉</a></li>
+				<li><a>梨</a></li>
+				<li><a>桃</a></li>
+				<li class="divider"></li>
+				<li><a>芹菜</a></li>
+				<li><a>萝卜</a></li>
+				<li><a>茄子</a></li>
+				<li class="divider"></li>
+				<li><a>米饭</a></li>
+				<li><a>馒头</a></li>
+				<li><a>面条</a></li>
+			</ul>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>下拉菜单--菜单标题</legend>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				下拉菜单
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation" class="dropdown-header">第一部分菜单头部</li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation" class="dropdown-header">第二部分菜单头部</li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+			</ul>
+		</div> 
+		<div class="dropdown">
+			<button type="button" class="btn btn-success" data-toggle="dropdown">食物
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">水果</li>
+				<li><a>苹果</a></li>
+				<li><a>香蕉</a></li>
+				<li><a>梨</a></li>
+				<li><a>桃</a></li>
+				<li class="dropdown-header">蔬菜</li>
+				<li><a>芹菜</a></li>
+				<li><a>萝卜</a></li>
+				<li><a>茄子</a></li>
+				<li class="dropdown-header">主食</li>
+				<li><a>米饭</a></li>
+				<li><a>馒头</a></li>
+				<li><a>面条</a></li>
+			</ul>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<style type="text/css">
+			.dropdown{
+				float: left;
+			}
+		</style>
+		<legend>下拉菜单--对齐方式</legend>
+		<h4>使用pull-right类使下拉菜单与父容器右边对齐</h4>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				下拉菜单
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu pull-right"  role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+			</ul>
+		</div>
+		<br />
+		<br />
+		<h4>使用dropdown-menu-right类使下拉菜单与父容器右边对齐</h4>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				下拉菜单
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+			</ul>
+		</div> 
+		<br />
+		<br />
+		<h4>下拉菜单与父容器左边对齐</h4>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				下拉菜单
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+			</ul>
+		</div> 
+		<br />
+		<br />
+		<div class="dropdown">
+			<button type="button" class="btn btn-success" data-toggle="dropdown">食物
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu pull-right" >
+				<li class="dropdown-header">水果</li>
+				<li><a>苹果</a></li>
+				<li><a>香蕉</a></li>
+				<li><a>梨</a></li>
+				<li><a>桃</a></li>
+				<li class="dropdown-header">蔬菜</li>
+				<li><a>芹菜</a></li>
+				<li><a>萝卜</a></li>
+				<li><a>茄子</a></li>
+				<li class="dropdown-header">主食</li>
+				<li><a>米饭</a></li>
+				<li><a>馒头</a></li>
+				<li><a>面条</a></li>
+			</ul>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+
+	<fieldset>
+		<legend></legend>
 	</fieldset>
 
 	<fieldset>
