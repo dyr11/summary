@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>trigger</title>
+</head>
+<body>
+	<input type="text" id="in" name="" value="" placeholder="">
+</body>
+	<script src="jquery.js" type="text/javascript" charset="utf-8" ></script>
+	<script type="text/javascript">
+		$("#in").trigger("select");
+		$("#in").bind("r",function(){
+			console.log("d");
+		});
+		$("#in").trigger("r");
+	</script>
+</html>

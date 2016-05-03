@@ -1,0 +1,9 @@
+[
+{"key":"baseProgress","value":"基本进度条"},
+{"key":"colorProgress","value":"彩色进度条"},
+{"key":"stripedprogress","value":"条纹进度条"},
+{"key":"activeProgress","value":"动态条纹"},
+{"key":"multiProgress","value":"层叠进度条"},
+{"key":"labelProgress","value":"带标签进度条"}
+
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>promise</title>
+	<style type="text/css" media="screen">
+		.ball{
+			width: 100px;
+			height: 100px;
+			border-radius:50px;
+		}
+		.ball1{
+			background-color: red;
+		}
+		.ball2{
+			background-color: green;
+		}
+		.ball3{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="ball ball1" id="ball1"  style="margin-left: 0"></div>
+	<div class="ball ball2" id="ball2"  style="margin-left: 0"></div>
+	<div class="ball ball3" id="ball3"  style="margin-left: 0"></div>	
+	<script type="text/javascript">
+		function ballmove(ball,distance,callback){
+			setTimeout(function(){
+				var marginLeft=parseInt(ball.style.marginLeft);
+				if(marginLeft==distance){
+					callback&&callback();
+				}else{
+					if(marginLeft>distance){
+						marginLeft--;
+					}else{
+						marginLeft++;
+					}
+					ball.style.marginLeft=marginLeft+"px";
+					ballmove(ball,distance, callback);
+				}
+			},13);
+		}
+
+		var ball1=document.querySelector("#ball1")
+		var ball2=document.querySelector("#ball2")
+		var ball3=document.querySelector("#ball3")
+		// ballmove(ball1,300,function(){
+		// 	ballmove(ball2,300,function(){
+		// 		ballmove(ball3,300,function(){
+		// 			ballmove(ball3,150,function(){
+		// 				ballmove(ball2,150,function(){
+		// 					ballmove(ball1,150,function(){
+
+		// 					})
+		// 				})
+		// 			})
+		// 		})
+		// 	})
+		// });
+
+		var ballmove2=function(ball,distance){
+			return new Promise(function(resolve,reject){
+				ballmove(ball,distance,resolve);
+			});
+		}
+
+		ballmove2(ball1,300)
+		.then(function(){
+			return ballmove2(ball2,300);
+		}).then(function(){
+			return ballmove2(ball3,300);
+		}).then(function(){
+			return ballmove2(ball3,150);
+		}).then(function(){
+			return ballmove2(ball2,150);
+		}).then(function(){
+			return ballmove2(ball1,150);
+		});
+	</script>
+</body>
+</html>

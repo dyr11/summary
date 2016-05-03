@@ -6,3 +6,5 @@ www.gruntjs.org
 bower
 http-server
 µ¥Ôª²âÊÔ£ºkarma jasmine protractor
+
+bower install argular-ui-router

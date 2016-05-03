@@ -1,0 +1,25 @@
+document.getElementById("id").style.display="none";
+$("#id").show(speed,[callback]);
+$("#id").toggle(speed,[callback]);
+$("#id").slideUp();
+$("#id").slideDown();
+$("#id").slideToggle();
+$("#id").fadeIn();
+$("#id").fadeOut();
+$("#id").fadeTo(speed,opacity,callback);
+$("#id").animate(params,[duration],[easing],[callback]);//id必须设置为absolute,fixed,relative;
+params:{
+	width:"30%",
+	height:"100px",
+	left:"200px",
+	top:"300px",
+	width:"-=100px"
+}
+$("#id").delay(3000);
+$("#id")
+$("#id")
+$("#id")
+$("#id")
+$("#id")
+$("#id")
+$("#id")

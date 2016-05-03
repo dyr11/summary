@@ -1,0 +1,102 @@
+<script type="text/javascript">
+	//回调队列
+	var s=$.Callbacks();
+	s.add(function(){
+		console.log("first");
+	}).add(function(){
+		console.log("second");
+	});
+	s.fired();
+</script>
+
+<script type="text/javascript">
+	// settimeout实现伪多线程
+	function fun(){
+		var i=0;
+		function inner(){
+			var timer=setTimeout(fun,0);
+			if(i<0XFFFF){
+				//do something;
+			}else{
+				clearTimeout(timer);
+			}
+		}
+		inner();
+	}
+
+</script>
+
+
+<script type="text/javascript">
+	//setTimeout(fun,0)不会立即执行；
+	setTimeout(function() {
+		console.log("Timeout");
+	}, 0);
+
+	function a(x) {
+		console.log("a() 开始运行");
+		b(x);
+		console.log("a() 结束运行");
+	}
+
+	function b(y) {
+		console.log("b() 开始运行");
+		console.log("传入的值为" + y);
+		console.log("b() 结束运行");
+	}
+
+	console.log("当前任务开始");
+	a(42);
+	console.log("当前任务结束");
+
+	// 当前任务开始
+	// a() 开始运行
+	// b() 开始运行
+	// 传入的值为42
+	// b() 结束运行
+	// a() 结束运行
+	// 当前任务结束
+	// Timeout
+</script>
+
+
+<script type="text/javascript">
+	//异步回调
+	function asyn(list,callback){
+		var timer=setTimeout(asyn,0,list,callback);
+		if(list.length>0){
+			list.shift()();
+		}else{
+			clearTimeout(timer);
+		}
+	}
+
+	function task1(){};
+	function task2(){};
+	function task3(){};
+	function task4(){};
+	function callback(){};
+	asyn([task1,task2,task3,task4],callback);
+	//continue 
+</script>
+
+
+<script type="text/javascript">
+	//观察者模式pub/sub
+	function observers(){
+		this.callbacks=[];
+		this.add(fun){
+			this.callbacks.push(fun);
+		}
+		this.fire(){
+			this.callbacks.forEach( function(element, index) {
+				element();
+			});
+		}
+	}
+
+	var ob=new observers();
+	ob.add(function(){});
+	ob.add(function(){});
+	ob.fire();
+</script>

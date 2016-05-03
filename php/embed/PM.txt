@@ -1,0 +1,340 @@
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 5.00 - Voltage: 0.02V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 1.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 8.00 - Voltage: 0.04V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 9.00 - Voltage: 0.04V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 4.00 - Voltage: 0.02V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 5.00 - Voltage: 0.02V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 19.00 - Voltage: 0.09V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 7.00 - Voltage: 0.03V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 6.00 - Voltage: 0.03V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 3.00 - Voltage: 0.01V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 4.00 - Voltage: 0.02V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 0.00 - Voltage: 0.00V - Dust Density: 0.00 mg/m3
+LOW
+temp:21
+humi:61
+tol:82
+Raw Signal Value (0-1023): 279.00 - Voltage: 1.36V - Dust Density: 0.13 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 43.00 - Voltage: 0.21V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 43.00 - Voltage: 0.21V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 44.00 - Voltage: 0.21V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 45.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 45.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 45.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 45.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:45
+tol:66
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3
+temp:21
+humi:46
+tol:67
+Raw Signal Value (0-1023): 46.00 - Voltage: 0.22V - Dust Density: 0.00 mg/m3

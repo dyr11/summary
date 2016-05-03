@@ -1,0 +1,18 @@
+
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title">
+				<a  href="" data-toggle="collapse" data-target="#thirdMenu">折叠/展开</a>
+			</h2>
+		</div>
+		<div class="collapse panel-collapse in" id="thirdMenu">
+			<div class="panel-body">
+				<ul class="nav nav-pills nav-stacked">
+					<li ng-repeat="menu in thirdMenuData"><a ui-sref="first.second.third.fourth({fourth:menu.key})">{{menu.value}}</a></li>
+				</ul>
+			</div>
+			<div class="panel-footer"></div>
+		</div>
+	</div>
+</div>

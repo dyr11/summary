@@ -1,0 +1,20 @@
+决git中push origin master出错：error: src refspec master does not match any
+先去add，再commit，然后再push，就可以了：
+
+
+git clone git://github.com/schacon/grit.git
+git remote rm origin
+git remote add origin git@github.com:foo/bar.git
+git push origin master
+
+追加文件：
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+
+
+取消add的文件
+git reset HEAD filename
+
+取消对文件的修改
+ git checkout -- filename

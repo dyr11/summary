@@ -1,0 +1,33 @@
+<!-- <div class="jumbotron"> -->
+<!-- 	<ul class="list-inline">
+		<li  ng-repeat="menu in secondMenuData">
+		<a  ui-sref="first.second.third({third:menu.key})" class="btn btn-success">{{menu.value}}
+				<span class="badge">11</span>
+			</a>
+		</li>
+	</ul> -->
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h2 class="panel-title">
+					<a data-toggle="collapse" href="" data-target="#secondMenu">折叠/展开</a>
+				</h2>
+			</div>
+			<div class="collapse panel-collapse in" id="secondMenu">
+				<div class="panel-body">
+					<div class="btn-group">
+						<button  ng-repeat="menu in secondMenuData" type="button"  class="btn {{menu.active}} " ng-click="active(menu)">
+							<a  ui-sref="first.second.third({third:menu.key})">{{menu.value}}
+								<span class="badge">11</span>
+							</a>
+						</button>
+					</div>
+				</div>
+				<div class="panel-footer">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- </div> -->

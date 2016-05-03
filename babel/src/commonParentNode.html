@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>title</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			function namespace(oNamespace, sPackage) {
+				var list=sPackage.split('.');
+				var name=oNamespace;
+				for(var i=0;i<list.length;i++){
+					var key=list[i];
+					if(typeof name[key]!=='object'){
+						name[key]={};
+					}
+					name=name[key];
+				}
+				return oNamespace;
+			}
+			console.log(namespace({a: {test: 1, b: 2}}, 'a.b.c.d'));
+		}
+	</script>
+</head>
+<body>
+	<div id="id1">
+		<div id="id11"></div>
+	</div>
+	<div id="id2">
+		<div id="id21"></div>
+	</div>
+</body>
+</html>

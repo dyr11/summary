@@ -1,0 +1,9 @@
+
+
+data:{RSV: 40.00 
+Voltage: 0.20V 
+DustDensity: 0.00 mg/m3 
+temp:18 
+humi:27 
+tol:45
+}

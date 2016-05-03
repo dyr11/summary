@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoNgClass">
+<head>
+    <meta charset="UTF-8">
+    <title>ng_class</title>
+    <style type="text/css">
+        .error{
+            background-color: red;
+        }
+        .warning{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="CTRL">
+    <div ng-class="{error:isError,warning:isWarning }">
+        {{message}}
+        <br>
+        <button ng-click="error()" >error</button>
+        <button ng-click="warning()">warning</button>
+    </div>
+
+    <div ng-controller="ngShow">
+        <button ng-click="ng_show()">CTRL</button>
+        <div ng-show="show">
+            <ul>
+                <li>33333</li>
+                <li>22222</li>
+                <li>111111</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="demoNgClass.js"></script>
+</html>

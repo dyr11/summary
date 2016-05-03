@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Holy Grail Layout</title>
+	<style type="text/css" media="screen">
+		html,body{
+			height:100%;
+		}
+		.container{
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			background-color: green;
+		}
+		.header,.footer{
+			flex :0 0 100px;
+			background-color: red;
+		}
+		.context{
+			flex:1 1 1100px;
+			display: flex;
+			flex-direction: row;
+		}
+		.context .left,.context .right{
+			flex:0 0 100px;
+			background-color: pink;
+		}
+		.context .middle{
+			flex :1 1 300px;
+			background-color: yellow;
+		}
+		@media (max-width: 500px){
+			.context{
+				flex-direction: column;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header"></div>
+		<div class="context">
+			<div class="left"></div>
+			<div class="middle"></div>
+			<div class="right"></div>
+		</div>
+		<div class="footer"></div>
+	</div>	
+</body>
+</html>

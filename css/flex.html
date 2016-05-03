@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>flex </title>
+	<style type="text/css" media="screen">
+		.box{
+			display: flex;
+			width: 220px;
+			height: 220px; 
+			background-color: red;
+			align-items: center;
+			border-radius: 10px;
+			padding: 20px;
+			margin: 20px;
+		}
+		html,body{
+			height:100%;
+		}
+		body{
+			display: flex;
+			flex-wrap: wrap;
+			background: -webkit-linear-gradient(top, #000, #fff) fixed;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.item{
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: blue;
+			padding: 5px;
+			margin: 5px;
+		}
+		.column{
+			display: flex;
+			flex-basis: 100%;
+			justify-content: space-between;
+		}
+		.space-between{
+			justify-content: space-between;
+		}
+		.cell{
+			flex:1;
+			height: 20px;
+			
+		}
+		.cell:nth-child(2n){
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" style="justify-content: center;align-items: center;">
+		<span class="item"></span>
+	</div>
+	<div class="box" style="justify-content: space-between ;align-items: flex-start;">
+		<span class="item"></span>
+		<span class="item" style="align-self: flex-end;"></span>
+	</div>
+	<div class="box" style="justify-content: space-between ;align-items: flex-start;">
+		<span class="item"></span>
+		<span class="item" style="align-self: center;"></span>
+		<span class="item" style="align-self: flex-end;"></span>
+	</div>
+	<div class="box" style="align-content: space-between;flex-wrap:wrap">
+		<div class="column">
+			<span class="item"></span>
+			<span class="item" ></span>
+		</div>
+		<div class="column" >
+			<span class="item" ></span>
+			<span class="item" ></span>
+		</div>
+	</div>
+	<div class="box" style="align-content: space-between;flex-wrap:wrap">
+		<div class="column">
+			<span class="item"></span>
+			<span class="item" ></span>
+		</div>
+		<div class="column" style="justify-content: center;">
+			<span class="item" ></span>
+		</div>
+		<div class="column" >
+			<span class="item" ></span>
+			<span class="item" ></span>
+		</div>
+	</div>
+	<div class="box" style="align-content: space-between;flex-wrap:wrap">
+		<div class="column">
+			<span class="item"></span>
+			<span class="item" ></span>
+		</div>
+		<div class="column" style="justify-content: space-between;">
+			<span class="item" ></span>
+			<span class="item" ></span>
+		</div>
+		<div class="column" >
+			<span class="item" ></span>
+			<span class="item" ></span>
+		</div>
+	</div>
+
+	<div class="box">
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+		<div class="cell"></div>
+	</div>
+</body>
+</html>

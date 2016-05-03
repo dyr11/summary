@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>sql syntax</title>
+</head>
+<body>
+	<ul>
+		<li>Aliases: select column_name as alias_name form table_name;</li>
+		<li>Aliases: select column_name(s) form table_name as alias_name;</li>
+		<li>Aliases :it requires double quotation marks or square brackets if the column name contains apaces</li>
+		<li>Aliases: select column1,column2+','+column3+','+column4 as newcolumn form tabel_name</li>
+		<li>Aliases:select column1,concat(column2,',',column3,',',column4) as new_column from table_name</li>
+		<li>INNER JOIN: Returns all rows when there is at least one match in BOTH tables</li>
+		<li>LEFT JOIN: Return all rows from the left table, and the matched rows from the right table</li>
+		<li>RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table</li>
+		<li>FULL JOIN: Return all rows when there is a match in ONE of the tables</li>
+		<li>INNER JOIN:select column_name(s) from table1 inner join table2 on table1.column1=table2.column2;</li>
+		<li>The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns. If there are rows in the "Customers" table that do not have matches in "Orders", these customers will NOT be listed.
+		</li>
+		<li>LEFT JOIN:select column_name(s) form table1 left join table2.....</li>
+		<li>in some databases left join is called left outer join</li>
+		<li>RIGHT JOIN:select column_name(s) from table1 right outer join table2....</li>
+		<li>FULL OUTER JOIN:select column_name(s) from table1 full outer join table2 on....</li>
+		<li>The SQL UNION operator combines the result of two or more SELECT statements.</li>
+		<li>UNION Syntax:select column(s) from table1 union select column(s) from table2;</li>
+		<li>Note: The UNION operator selects only distinct values by default. To allow duplicate values, use the ALL keyword with UNION.</li>
+		<li>SQL UNION ALL Syntax: select column(s) from table1 union all select column(s) from table2</li>
+		<li>SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City;</li>
+		<li>With SQL, you can copy information from one table into another.The SELECT INTO statement copies data from one table and inserts it into a new table.</li>
+		<li>SELECT  INTO Syntax:select * into table1 from table2;</li>
+		<li>SELECT column(s) INTO table1 from table2;</li>
+		<li>Use the IN clause to copy the table into another database:</li>
+		<li>The INSERT INTO SELECT statement copies data from one table and inserts it into an existing table.</li>
+		<li>INSERT INTO SELECT Syntax:insert into table1 select *from table2</li>
+		<li>CREATE DATABASE Syntax:create database dbname</li>
+		<li>CREATET TABLE Syntax:create table table_name{column_name1 datatype,column_name2 datatype};</li>
+		<li>CREATE TABLE Persons(PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255));</li>
+		<li>CREATE TABLE+CONSTRAINT Syntax:CREATE TABLE table_name(column_name1 data_type(size) constraint_name,column_name2 data_type(size) constraint_name,column_name3 data_type(size) constraint_name,....);</li>
+		<li> In SQL, we have the following constraints:
+
+			NOT NULL - Indicates that a column cannot store NULL value
+			UNIQUE - Ensures that each row for a column must have a unique value
+			PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Ensures that a column (or combination of two or more columns) have a unique identity which helps to find a particular record in a table more easily and quickly
+			FOREIGN KEY - Ensure the referential integrity of the data in one table to match values in another table
+			CHECK - Ensures that the value in a column meets a specific condition
+			DEFAULT - Specifies a default value for a column</li>
+			<li><pre>
+				CREATE TABLE Persons
+				(
+				P_Id int NOT NULL,
+				LastName varchar(255) NOT NULL,
+				FirstName varchar(255),
+				Address varchar(255),
+				City varchar(255),
+				CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)
+				)
+			</pre></li>
+			<li>UNIQUE Constraint on ALTER TABLE:ALTER TABLE Persons ADD UNIQUE (P_Id)</li>
+			<li>ALTER TABLE Persons ADD CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)</li>
+			<li><pre>
+				To DROP a UNIQUE Constraint:
+				MySQL:
+				ALTER TABLE Persons
+				DROP INDEX uc_PersonID
+
+				SQL Server / Oracle / MS Access:
+				ALTER TABLE Persons
+				DROP CONSTRAINT uc_PersonID
+			</pre></li>
+			<li><pre>
+				SQL DEFAULT Constraint on ALTER TABLE
+				To create a DEFAULT constraint on the "City" column when the table is already created, use the following SQL:
+
+				MySQL:
+				ALTER TABLE Persons
+				ALTER City SET DEFAULT 'SANDNES'
+
+				SQL Server / MS Access:
+				ALTER TABLE Persons
+				ALTER COLUMN City SET DEFAULT 'SANDNES'
+
+				Oracle:
+				ALTER TABLE Persons
+				MODIFY City DEFAULT 'SANDNES'
+			</pre></li>
+			<li><pre>
+				SQL CREATE INDEX Syntax
+				Creates an index on a table. Duplicate values are allowed:
+
+				CREATE INDEX index_name
+				ON table_name (column_name)
+				SQL CREATE UNIQUE INDEX Syntax
+				Creates a unique index on a table. Duplicate values are not allowed:
+
+				CREATE UNIQUE INDEX index_name
+				ON table_name (column_name)
+			</pre></li>
+			<li><pre>
+				The DROP INDEX Statement
+				The DROP INDEX statement is used to delete an index in a table.
+
+				DROP INDEX Syntax for MS Access:
+				DROP INDEX index_name ON table_name
+				DROP INDEX Syntax for MS SQL Server:
+				DROP INDEX table_name.index_name
+				DROP INDEX Syntax for DB2/Oracle:
+				DROP INDEX index_name
+				DROP INDEX Syntax for MySQL:
+				ALTER TABLE table_name DROP INDEX index_name
+				The DROP TABLE Statement
+				The DROP TABLE statement is used to delete a table.
+
+				DROP TABLE table_name
+				The DROP DATABASE Statement
+				The DROP DATABASE statement is used to delete a database.
+
+				DROP DATABASE database_name
+				The TRUNCATE TABLE Statement
+				What if we only want to delete the data inside the table, and not the table itself?
+
+				Then, use the TRUNCATE TABLE statement:
+
+				TRUNCATE TABLE table_name
+			</pre></li>
+			<li><pre>
+				SQL CREATE VIEW Examples
+				CREATE VIEW [Current Product List] AS
+				SELECT ProductID,ProductName
+				FROM Products
+				WHERE Discontinued=No
+			</pre></li>
+			<li><pre>
+				SQL IS NULL:
+				SELECT LastName,FirstName,Address FROM Persons
+				WHERE Address IS NULL
+			</pre></li>
+			<li><pre>
+				SQL Aggregate Functions:
+				AVG() - Returns the average value
+				COUNT() - Returns the number of rows
+				FIRST() - Returns the first value
+				LAST() - Returns the last value
+				MAX() - Returns the largest value
+				MIN() - Returns the smallest value
+				SUM() - Returns the sum
+			</pre></li>
+			<li><pre>
+				SQL Scalar functions:
+				UCASE() - Converts a field to upper case
+				LCASE() - Converts a field to lower case
+				MID() - Extract characters from a text field
+				LEN() - Returns the length of a text field
+				ROUND() - Rounds a numeric field to the number of decimals specified
+				NOW() - Returns the current system date and time
+				FORMAT() - Formats how a field is to be displayed
+			</pre></li>
+			<li><pre>
+				SQL HAVING Example:
+				SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders FROM (Orders
+				INNER JOIN Employees
+				ON Orders.EmployeeID=Employees.EmployeeID)
+				GROUP BY LastName
+				HAVING COUNT(Orders.OrderID) > 10;
+			</pre></li>
+		</ul>	
+		<div class="table-responsive">
+			<table class="w3-table-all notranslate">
+				<tbody>
+					<tr>
+						<th style="width:27%">SQL Statement</th>
+						<th>Syntax</th>
+					</tr>
+					<tr>
+						<td>AND / OR
+						</td>
+						<td>SELECT column_name(s)<br>
+							FROM table_name<br>
+							WHERE condition<br>
+							AND|OR condition
+							
+						</td>
+					</tr>
+					<tr>
+						<td>ALTER TABLE
+						</td>
+						<td>ALTER TABLE table_name <br>
+							ADD column_name datatype<p>or</p>
+							<p>ALTER TABLE table_name <br>
+								DROP COLUMN column_name</p>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>AS (alias)
+							</td>
+							<td>SELECT column_name AS column_alias<br>
+								FROM table_name<p>or</p>
+								<p>SELECT column_name<br>
+									FROM table_name&nbsp; AS table_alias</p>
+
+								</td>
+							</tr>
+							<tr>
+								<td>BETWEEN
+								</td>
+								<td>SELECT column_name(s)<br>
+									FROM table_name<br>
+									WHERE column_name<br>
+									BETWEEN value1 AND value2
+								</td>
+							</tr>
+							<tr>
+								<td>CREATE DATABASE
+								</td>
+								<td>CREATE DATABASE database_name
+								</td>
+							</tr>
+							<tr>
+								<td>CREATE TABLE
+								</td>
+								<td>CREATE TABLE table_name<br>
+									(<br>
+									column_name1 data_type,<br>
+									column_name2 data_type,<br>
+									column_name3 data_type,<br>
+									...<br>
+									)
+								</td>
+							</tr>
+							<tr>
+								<td>CREATE INDEX
+								</td>
+								<td>CREATE INDEX index_name<br>
+									ON table_name (column_name)<p>or</p>
+									<p>CREATE UNIQUE INDEX index_name<br>
+										ON table_name (column_name)</p>
+									</td>
+								</tr>
+								<tr>
+									<td>CREATE VIEW
+									</td>
+									<td>CREATE VIEW view_name AS<br>
+										SELECT column_name(s)<br>
+										FROM table_name<br>
+										WHERE condition
+									</td>
+								</tr>
+								<tr>
+									<td>DELETE
+									</td>
+									<td>DELETE FROM table_name<br>
+										WHERE some_column=some_value<p>or</p>
+										<p>DELETE FROM table_name <br>
+											(<b>Note: </b>Deletes the entire table!!)</p>
+											<p>DELETE * FROM table_name <br>
+												(<b>Note: </b>Deletes the entire table!!)</p>
+											</td>
+										</tr>
+										<tr>
+											<td>DROP DATABASE
+											</td>
+											<td>DROP DATABASE database_name
+											</td>
+										</tr>
+										<tr>
+											<td>DROP INDEX
+											</td>
+											<td>DROP INDEX table_name.index_name (SQL 
+												Server)<br>
+												DROP INDEX index_name ON table_name (MS Access)<br>
+												DROP INDEX index_name (DB2/Oracle)<br>
+												ALTER TABLE table_name<br>
+												DROP INDEX index_name (MySQL)
+											</td>
+										</tr>
+										<tr>
+											<td>DROP TABLE
+											</td>
+											<td>DROP TABLE table_name
+											</td>
+										</tr>
+										<tr>
+											<td>EXISTS
+											</td>
+											<td>IF EXISTS (SELECT * FROM table_name WHERE id = ?)<br>BEGIN<br>--do 
+												what needs to be done if exists<br>END<br>ELSE<br>BEGIN<br>--do what needs 
+												to be done if not<br>END
+											</td>
+										</tr>
+										<tr>
+											<td>GROUP BY
+											</td>
+											<td>SELECT column_name, 
+												aggregate_function(column_name)<br>
+												FROM table_name<br>
+												WHERE column_name operator value<br>
+												GROUP BY column_name
+											</td>
+										</tr>
+										<tr>
+											<td>HAVING
+											</td>
+											<td>SELECT column_name, 
+												aggregate_function(column_name)<br>
+												FROM table_name<br>
+												WHERE column_name operator value<br>
+												GROUP BY column_name<br>
+												HAVING aggregate_function(column_name) operator value
+											</td>
+										</tr>
+										<tr>
+											<td>IN
+											</td>
+											<td>SELECT column_name(s)<br>
+												FROM table_name<br>
+												WHERE column_name<br>
+												IN (value1,value2,..)
+											</td>
+										</tr>
+										<tr>
+											<td>INSERT INTO
+											</td>
+											<td>INSERT INTO table_name<br>
+												VALUES (value1, value2, value3,....)<p><i>or</i></p>
+												<p>INSERT INTO table_name<br>
+													(column1, column2, column3,...)<br>
+													VALUES (value1, value2, value3,....)</p>
+												</td>
+											</tr>
+											<tr>
+												<td>INNER JOIN
+												</td>
+												<td>SELECT column_name(s)<br>
+													FROM table_name1<br>
+													INNER JOIN table_name2 <br>
+													ON table_name1.column_name=table_name2.column_name
+												</td>
+											</tr>
+											<tr>
+												<td>LEFT JOIN
+												</td>
+												<td>SELECT column_name(s)<br>
+													FROM table_name1<br>
+													LEFT JOIN table_name2 <br>
+													ON table_name1.column_name=table_name2.column_name
+												</td>
+											</tr>
+											<tr>
+												<td>RIGHT JOIN
+												</td>
+												<td>SELECT column_name(s)<br>
+													FROM table_name1<br>
+													RIGHT JOIN table_name2 <br>
+													ON table_name1.column_name=table_name2.column_name
+												</td>
+											</tr>
+											<tr>
+												<td>FULL JOIN
+												</td>
+												<td>SELECT column_name(s)<br>
+													FROM table_name1<br>
+													FULL JOIN table_name2 <br>
+													ON table_name1.column_name=table_name2.column_name
+												</td>
+											</tr>
+											<tr>
+												<td>LIKE
+												</td>
+												<td>SELECT column_name(s)<br>
+													FROM table_name<br>
+													WHERE column_name
+													LIKE pattern
+												</td>
+											</tr>
+											<tr>
+												<td>ORDER BY
+												</td>
+												<td>SELECT column_name(s)<br>
+													FROM table_name<br>
+													ORDER BY column_name [ASC|DESC]
+												</td>
+											</tr>
+											<tr>
+												<td>SELECT
+												</td>
+												<td>SELECT column_name(s)<br>
+													FROM table_name
+												</td>
+											</tr>
+											<tr>
+												<td>SELECT *
+												</td>
+												<td>SELECT *<br>
+													FROM table_name
+												</td>
+											</tr>
+											<tr>
+												<td>SELECT DISTINCT
+												</td>
+												<td>SELECT DISTINCT column_name(s)<br>
+													FROM table_name
+												</td>
+											</tr>
+											<tr>
+												<td>SELECT INTO
+												</td>
+												<td>SELECT *<br>
+													INTO new_table_name [IN externaldatabase]<br>
+													FROM old_table_name<p><i>or</i></p>
+													<p>SELECT column_name(s)<br>
+														INTO new_table_name [IN externaldatabase]<br>
+														FROM old_table_name</p>
+													</td>
+												</tr>
+												<tr>
+													<td>SELECT TOP
+													</td>
+													<td>SELECT TOP number|percent column_name(s)<br>
+														FROM table_name
+													</td>
+												</tr>
+												<tr>
+													<td>TRUNCATE TABLE
+													</td>
+													<td>TRUNCATE TABLE table_name
+													</td>
+												</tr>
+												<tr>
+													<td>UNION
+													</td>
+													<td>SELECT column_name(s) FROM table_name1<br>
+														UNION<br>
+														SELECT column_name(s) FROM table_name2
+													</td>
+												</tr>
+												<tr>
+													<td>UNION ALL
+													</td>
+													<td>SELECT column_name(s) FROM table_name1<br>
+														UNION ALL<br>
+														SELECT column_name(s) FROM table_name2
+													</td>
+												</tr>
+												<tr>
+													<td>UPDATE
+													</td>
+													<td>UPDATE table_name<br>
+														SET column1=value, column2=value,...<br>
+														WHERE some_column=some_value
+													</td>
+												</tr>
+												<tr>
+													<td>WHERE
+													</td>
+													<td>SELECT column_name(s)<br>
+														FROM table_name<br>
+														WHERE column_name operator value
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</body>
+									</html>

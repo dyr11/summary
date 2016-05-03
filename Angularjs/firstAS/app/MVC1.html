@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>first Angular.js</title>
+</head>
+<body>
+<div>
+    <input type="text" ng-model="green.text">
+    <br>
+    <p>{{green.text}},hello</p>
+
+    <div ng-view></div>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="js/myApp.js"></script>
+<script src="js/myController.js"></script>
+</body>
+</html>

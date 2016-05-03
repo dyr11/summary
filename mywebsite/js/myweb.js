@@ -1,0 +1,1 @@
+var myweb=angular.module('myweb', ['myrouter','mycontroller','myservice']);

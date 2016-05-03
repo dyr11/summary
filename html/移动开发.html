@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>移动开发</title>
+</head>
+<body>
+	<ul>
+		<li>跨浏览器的库modernizr;html5shim;innerShiv;</li>
+		<li>阻止页面字体的自动调整 <pre>
+			html{
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			text-size-adjust:100%}
+		</pre></li>
+		<li>px ,em优先使用px;</li>
+		<li>浏览器视口<pre>
+			&lt;meta name="HandheldFriendly" content="true" &gt;
+			&lt;meta name="MobileOptimized" content="320" &gt;
+			&lt;meta name="viewport" content="width=device-width" &gt;
+		</pre></li>
+		<li>禁止输入框获得焦点时自动缩放:修改viewport的属性获得焦点时maximum-score=1;失去焦点时maximum-score=10;</li>
+		<li>移动设备使用touchmove 相当于桌面的mousemove</li>
+		<li>横竖屏切换:window.onorientationchange;</li>
+		<li>横屏应用:使用css3的transform:rotate(90deg);</li>
+		<li>手势:gesturestart.gesturechange,gestureend;e.rotation</li>
+		<li>jquery mobile滑动事件:swipeleft;swiperight;</li>
+		<li>缩放,e.scale</li>
+		<li>modernizr是一个检测浏览器功能支持情况的javascript库</li>
+		<li>yepnope异步加载js依赖文件</li>
+		<li>使用window.scrollTo(0.0)可以隐藏地址栏</li>
+		<li>apache 修改.htaccess增加Header append Cache-Control "no-transform" 可以避免移动设备转码</li>
+		<li>apache增加对文件类型的支持:.htaccess;增加 AddType text/cache-manifest appcache manifest</li>
+		<li>文件过期时间:ExpiresByType text/css "access puls 1 year"</li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>	
+</body>
+</html>
