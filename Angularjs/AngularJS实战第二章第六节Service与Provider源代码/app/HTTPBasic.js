@@ -15,4 +15,5 @@ myModule.controller('LoadDataCtrl', ['$scope','$http', function($scope,$http){
         console.log( $scope.users);
         user.name="3333";
     }
+
 }]);
