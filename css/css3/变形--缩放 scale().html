@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="utf-8">
+	<title>变形与动画</title>
+	<style type="text/css" media="screen">
+		.wrapper {
+			width: 200px;
+			height: 200px;
+			border:2px dashed red;
+			margin: 100px auto;
+		}
+
+		.wrapper div {
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			background: orange;
+			text-align: center;
+			color: #fff;
+		}
+
+		.wrapper div:hover {
+			opacity: .5;
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			transform: scale(0.8);
+		}
+		
+	</style>
+</head> 
+<body>
+	<div class="wrapper">
+		<div>我将缩小0.8</div>
+	</div>
+
+</body>
+</html>
